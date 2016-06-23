@@ -1,0 +1,20 @@
+<div ng-controller="AdminController" class="card card-admin">
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="email" type="text" ng-model="credentials.username" class="validate">
+                    <label for="email">Email</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="password" type="password" ng-model="credentials.password" class="validate">
+                    <label for="password">Password</label>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <a class="waves-effect waves-light btn" ng-click="signIn(credentials);">Sign in</a>
+</div>
