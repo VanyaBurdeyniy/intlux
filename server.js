@@ -8,11 +8,11 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 var express = require('express');
 
 // Configure Express
-var expressServer = require('./config/express');
-var app = expressServer();
+//var expressServer = require('./config/express');
+var app = express();
 
 // Bootstrap passport config
-var passport = require('./config/passport')();
+//var passport = require('./config/passport')();
 
 app.use(express.static(__dirname + '/public'));
 //app.use(express.static(__dirname + '/bower_components'));
