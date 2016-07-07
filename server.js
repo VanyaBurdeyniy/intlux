@@ -1,10 +1,10 @@
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 // Requiring dependencies
-var mongoose = require('mongoose');
+//var mongoose = require('mongoose');
 
 // Configure Mongoose
-var db = mongoose.connect('mongodb://localhost/intlux');
+//var db = mongoose.connect('mongodb://localhost/intlux');
 var express = require('express');
 
 // Configure Express
