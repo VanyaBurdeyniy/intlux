@@ -19,11 +19,46 @@ artVikonce.config(function($stateProvider, $urlRouterProvider, $locationProvider
             controller: 'ShopController'
         })
 
+        .state('service', {
+            name: 'service',
+            url: '/service/category/:id',
+            templateUrl: '../views/service-categories.html',
+            controller: 'ProductCategoriesController'
+        })
+
+        .state('service-sub', {
+            name: 'service-sub',
+            url: '/service/subcategory/:id',
+            templateUrl: '../views/service-sub-categories.html',
+            controller: 'ProductSubCategoriesController'
+        })
+
         .state('product', {
             name: 'product',
             url: '/product/category/:id',
             templateUrl: '../views/product-categories.html',
             controller: 'ProductCategoriesController'
+        })
+
+        .state('product-sub', {
+            name: 'product-sub',
+            url: '/product/subcategory/:id',
+            templateUrl: '../views/product-sub-categories.html',
+            controller: 'ProductSubCategoriesController'
+        })
+
+        .state('product-category-sub', {
+            name: 'product-category-sub',
+            url: '/product/subcategory/sub/:id',
+            templateUrl: '../views/product-subcategory-sub.html',
+            controller: 'SubCategorySubController'
+        })
+
+        .state('news', {
+            name: 'news',
+            url: '/news/:id',
+            templateUrl: '../views/news-describe.html',
+            controller: 'NewsDescribeController'
         })
 
         .state('map', {
@@ -45,6 +80,13 @@ artVikonce.config(function($stateProvider, $urlRouterProvider, $locationProvider
             url: '/admin/panel',
             templateUrl: '../views/adminPanel.html',
             controller: 'AdminController'
+        })
+
+        .state('adminNews', {
+            name: 'adminNews',
+            url: '/admin/panel/news',
+            templateUrl: '../views/admin-news.html',
+            controller: 'AdminNewsController'
         })
 
     //$locationProvider.html5Mode(true);

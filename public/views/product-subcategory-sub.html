@@ -1,0 +1,25 @@
+<br>
+<br>
+<br>
+<br>
+<div class="content-section-b no-background border-color-transparent" id="products-container">
+
+    <div class="container">
+
+        <div class="row product-list" ng-repeat="product in products">
+
+            <h2 class="border-light">{{product.name}}</h2>
+            <br>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" ng-repeat="subProduct in product.subCategories">
+                <h6 class="text-center h6-min-height">{{subProduct.name}}</h6>
+                <img ng-click="productCategories(subProduct);" ng-src="{{subProduct.img}}" alt="" class="img-responsive">
+                <p class="text-center">{{subProduct.descriptionSmall}}</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>

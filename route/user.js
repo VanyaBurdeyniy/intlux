@@ -7,6 +7,7 @@ module.exports = function(app) {
     app.route('/auth/signin').post(users.signin);
     app.route('/auth/signout').get(users.signout);
     app.route('/users').get(users.getUsers);
+    app.route('/saveimage').post(users.saveImage);
     app.route('/add/calendar').post(users.addToCalendar);
 
     // Setting the facebook oauth routes

@@ -10,21 +10,23 @@
 
   <!-- Custom CSS -->
   <link href="css/landing-page.css" rel="stylesheet">
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.20.0/mapbox-gl.js'></script>
-  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.20.0/mapbox-gl.css' rel='stylesheet' />
+  <!--<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>-->
+  <script src='js/mapbox-gl.js'></script>
+  <link href='css/mapbox-gl.css' rel='stylesheet' />
   <!--<script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.4/mapbox.js'></script>-->
   <!--<link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.4/mapbox.css' rel='stylesheet' />-->
   <link href="css/main.css" rel="stylesheet">
 
   <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <!--<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">-->
 
 
 </head>
 <body ng-app="artVikonce">
 
-  <div ng-include src="'views/partials/navbar.html'"></div>
+  <div ng-hide="isAdmin" ng-include src="'views/partials/navbar.html'"></div>
+
+  <div class="water-symbol"></div>
 
   <ui-view></ui-view>
 
@@ -37,9 +39,11 @@
 
   <!-- Bootstrap Core JavaScript -->
   <script src="js/bootstrap.min.js"></script>
-
-  <script src="http://code.angularjs.org/1.2.10/angular.min.js"></script>
-  <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script>
+  <script type="text/javascript" src="src/tinymce-origin.js"></script>
+  <script src="js/angular.min.js"></script>
+  <!--<script type="text/javascript" src="src/tinymce.js"></script>-->
+  <!--<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>-->
+  <script src="js/angular-uii-router.min.js"></script>
   <!--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false" type="text/javascript"></script>-->
   <script src="js/app.js"></script>
 
@@ -50,6 +54,11 @@
   <script src="js/controllers/AdminController.js"></script>
   <script src="js/controllers/ProductCategoriesController.js"></script>
   <script src="js/controllers/MapController.js"></script>
+  <script src="js/controllers/NewsDescribeController.js"></script>
+  <script src="js/controllers/AdminNewsController.js"></script>
+  <!--<script src="js/controllers/ServiceCategoryController.js"></script>-->
+  <script src="js/controllers/ProductSubCategorySubController.js"></script>
+  <script src="js/controllers/ProductSubCategoriesController.js"></script>
 
 
   <script src="js/jquery-functions.js"></script>

@@ -5,7 +5,8 @@
  */
 var mongoose = require('mongoose'),
     passport = require('passport'),
-    User = mongoose.model('User');
+    User = mongoose.model('User'),
+    fs = require('fs');
 
 /**
  * Get the error message from error object
@@ -37,6 +38,16 @@ var getErrorMessage = function(err) {
 exports.signout = function(req, res) {
     req.logout();
     res.redirect('/');
+};
+
+exports.saveImage = function(req, res) {
+    var base64Data = req.body.image.replace(/^data:image\/png;base64,/, "");
+
+    fs.writeFile("out.png", base64Data, 'base64', function(err) {
+        console.log(err);
+    });
+
+    res.send(200);
 };
 
 /**

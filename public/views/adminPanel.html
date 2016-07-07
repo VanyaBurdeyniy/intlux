@@ -1,3 +1,25 @@
-<ul id="nav-mobile" class="side-nav">
-    <li><a href="#">Navbar Link</a></li>
-</ul>
+<div id="wrapper">
+    <div class="overlay"></div>
+
+    <nav ng-include src="'views/partials/sidebar.html'" class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation"></nav>
+
+    <div id="page-content-wrapper">
+        <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+        </button>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5"></div>
+                <div class="col-lg-7">
+                    <div ng-repeat="new in news">
+                        <img ng-src="{{new.img}}" alt="">
+                        <p class="p">{{new.content.innerHTML}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

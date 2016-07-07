@@ -32,10 +32,10 @@ artVikonce.controller('MapController', ['$scope', function($scope) {
         initMap(markerArr);
     });
 
-    function initMap(markers) {
-        if (markers) {
-            markerArr = markers;
-        }
+    function initMap() {
+        //if (markers) {
+        //    markerArr = markers;
+        //}
         map.on('load', function () {
             map.addSource("markers", {
                 "type": "geojson",
@@ -45,24 +45,24 @@ artVikonce.controller('MapController', ['$scope', function($scope) {
                         "type": "Feature",
                         "geometry": {
                             "type": "Point",
-                            "coordinates": markerArr
+                            "coordinates": [-77.03238901390978, 38.913188059745586]
                         },
                         "properties": {
                             "title": "Mapbox DC",
                             "marker-symbol": "circle"
                         }
+                    },
+                        {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [-122.414, 37.776]
+                        },
+                        "properties": {
+                            "title": "Mapbox SF",
+                            "marker-symbol": "circle"
+                        }
                     }
-                    //    {
-                    //    "type": "Feature",
-                    //    "geometry": {
-                    //        "type": "Point",
-                    //        "coordinates": [-122.414, 37.776]
-                    //    },
-                    //    "properties": {
-                    //        "title": "Mapbox SF",
-                    //        "marker-symbol": "harbor"
-                    //    }
-                    //}
                     ]
                 }
             });

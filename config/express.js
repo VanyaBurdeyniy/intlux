@@ -14,6 +14,7 @@ module.exports = function() {
 
     // Configure models
     require('../models/user.model');
+    require('../models/news.model');
 
 	// Enable logger (morgan)
     app.use(morgan('dev'));
@@ -36,6 +37,7 @@ module.exports = function() {
 
     // Configure routing
     require('../route/user')(app);
+    require('../route/news')(app);
 
 	// Setting the app router and static folder
 	//app.use(express.static('../public'));

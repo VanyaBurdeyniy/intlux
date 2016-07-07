@@ -8,22 +8,86 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand topnav" ng-href="#/">Лого</a>
+            <a class="navbar-brand topnav" ng-href="#/">
+                <img src="img/intluxHeaderText.png" alt="">
+                <span class="brand-name">INTLUX ENERGY <br>
+                    <span class="brand-name-description">PART OF INTELLICO GROUP</span>
+                </span>
+            </a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <p class="change-lang">
+                <span>
+                    <a>ru</a>
+                </span> /
+                <span>
+                    <a>en</a>
+                </span> /
+                <span>
+                    <a>kz</a>
+                </span>
+            </p>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a ng-href="#/shop">О нас</a>
-                </li>
-                <li>
-                    <a class="link-nav" href="#products-container">Сервисы и продукты</a>
+                    <a href="#" class="dropdown-toggle"  data-toggle="dropdown">Компания <span style="line-height: 1.5;margin-left: 10px;" class="glyphicon glyphicon-chevron-down pull-right"></span></a>
+
+                    <ul class="dropdown-menu row">
+                        <li><a class="link-nav" href="#about_us">О нас</a></li>
+                        <li><a class="link-nav" href="#our_missions">Наши цели и миссия</a></li>
+                    </ul>
                 </li>
                 <li>
                     <a class="link-nav" href="#news-container">Новости</a>
                 </li>
                 <li>
-                    <a class="link-nav" href="#contact">Контакты</a>
+                    <!--<a class="link-nav" href="#products-container">Сервисы и продукты</a>-->
+
+                    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Сервисы и продукты <span style="line-height: 1.5;margin-left: 10px;" class="glyphicon glyphicon-chevron-down pull-right"></span></a>-->
+                    <a class="link-nav" href="#services-container">Сервисы и Оборудование</a>
+
+                    <ul class="dropdown-menu mega-dropdown-menu row">
+                        <li class="col-sm-3">
+                            <ul>
+                                <li class="dropdown-header">Категория</li>
+                                <li><a href="#">Unique Features</a></li>
+                                <li><a href="#">Image Responsive</a></li>
+                                <li><a href="#">Auto Carousel</a></li>
+                                <li><a href="#">Newsletter Form</a></li>
+                                <li><a href="#">Four columns</a></li>
+                                <li class="dropdown-header">Категория</li>
+                                <li><a href="#">Good Typography</a></li>
+                            </ul>
+                        </li>
+                        <li class="col-sm-3">
+                            <ul>
+                                <li class="dropdown-header">Категория</li>
+                                <li><a href="#">Easy to customize</a></li>
+                                <li><a href="#">Glyphicons</a></li>
+                                <li><a href="#">Pull Right Elements</a></li>
+                                <li class="dropdown-header">Категория</li>
+                                <li><a href="#">Coloured Headers</a></li>
+                                <li><a href="#">Primary Buttons & Default</a></li>
+                                <li><a href="#">Calls to action</a></li>
+                            </ul>
+                        </li>
+                        <li class="col-sm-3">
+                            <ul>
+                                <li class="dropdown-header">Категория</li>
+                                <li><a href="#">Default Navbar</a></li>
+                                <li><a href="#">Lovely Fonts</a></li>
+                                <li><a href="#">Responsive Dropdown </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a class="link-nav" href="#contacts">Контакты</a>
+                </li>
+                <li>
+                    <a class="link-nav" ng-href="/#/map">География продаж</a>
                 </li>
             </ul>
         </div>

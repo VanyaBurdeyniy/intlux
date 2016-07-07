@@ -1,0 +1,23 @@
+<div class="content-section-a no-background border-color-transparent" id="products-categories-container">
+
+    <div class="container">
+
+        <div class="row" ng-repeat="service in products">
+            <h3 class="text-center">{{service.name}}</h3>
+            <br>
+
+            <div class="col-lg-5">
+                <img ng-src="{{service.img}}" alt="" class="img-responsive">
+            </div>
+            <div class="col-lg-7">
+                <p>{{service.descriptionBig}}</p>
+            </div>
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <!-- /.container -->
+
+</div>
