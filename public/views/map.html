@@ -1,14 +1,26 @@
 <div ng-controller="MapController" id="map-container">
     <br>
+    <h1 class="text-center">География продаж</h1>
     <br>
-    <br>
-    <br>
-    <p class="countries-marker">
-        <span class="span-click">One |</span><span> Two |</span><span> Three |</span><span> Four</span>
-    </p>
-    <!--<button class="pseijpij">fgfdb</button>-->
-    <div id='map'></div>
-    <!--<div id='map-leaflet'></div>-->
+    <div class="col-sm-7">
+        <div id='map'></div>
+    </div>
+    <div class="col-sm-5">
+        <ul>
+            <li>
+                <label for="test_1">Test 1</label>
+                <input type="checkbox" ng-click="changeMarker()" id="test_1">
+            </li>
+            <li>
+                <label for="test_2">Test 2</label>
+                <input type="checkbox" id="test_2">
+            </li>
+            <li>
+                <label for="test_3">Test 3</label>
+                <input type="checkbox" id="test_3">
+            </li>
+        </ul>
+    </div>
 </div>
 <br>
 <br>

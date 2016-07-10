@@ -89,6 +89,13 @@ artVikonce.config(function($stateProvider, $urlRouterProvider, $locationProvider
             controller: 'AdminNewsController'
         })
 
+        .state('adminProducts', {
+            name: 'adminProducts',
+            url: '/admin/panel/products',
+            templateUrl: '../views/admin-products.html',
+            controller: 'AdminProductsController'
+        })
+
     //$locationProvider.html5Mode(true);
     $urlRouterProvider.otherwise('/');
 });

@@ -4,12 +4,12 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 var mongoose = require('mongoose');
 
 // Configure Mongoose
-var db = mongoose.connect('mongodb://185.65.246.183/intlux');
+var db = mongoose.connect('mongodb://localhost:27017/intlux');
 var express = require('express');
 
 // Configure Express
 var expressServer = require('./config/express');
-var app = express();
+var app = expressServer();
 
 // Bootstrap passport config
 var passport = require('./config/passport')();
