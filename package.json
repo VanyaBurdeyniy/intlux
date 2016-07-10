@@ -1,0 +1,32 @@
+{
+  "name": "intlux",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "basic-auth": "^1.0.4",
+    "body-parser": "^1.15.2",
+    "bytes": "^2.4.0",
+    "depd": "^1.1.0",
+    "express": "^4.14.0",
+    "express-session": "^1.14.0",
+    "mongoose": "^4.5.2",
+    "on-finished": "^2.3.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VanyaBurdeyniy/intlux.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VanyaBurdeyniy/intlux/issues"
+  },
+  "homepage": "https://github.com/VanyaBurdeyniy/intlux#readme"
+}
