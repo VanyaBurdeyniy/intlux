@@ -2,7 +2,7 @@ var mongoose = require('mongoose'),
     crypto = require('crypto'),
     Schema = mongoose.Schema;
 
-var ProductSchema = new Schema({
+var ProductSubCategorySchema = new Schema({
     title:String,
     decriptionBig: String,
     img: {
@@ -17,8 +17,8 @@ var ProductSchema = new Schema({
 });
 
 // Hook a pre save method to hash the password
-ProductSchema.pre('save', function(next) {
+ProductSubCategorySchema.pre('save', function(next) {
     next();
 });
 
-mongoose.model('Product', ProductSchema);
+mongoose.model('ProductSubCategory', ProductSubCategorySchema);

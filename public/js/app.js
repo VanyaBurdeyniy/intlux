@@ -1,5 +1,6 @@
 var artVikonce = angular.module('artVikonce', [
-    'ui.router'
+    'ui.router',
+    'flow'
 ]);
 
 artVikonce.config(function($stateProvider, $urlRouterProvider, $locationProvider)

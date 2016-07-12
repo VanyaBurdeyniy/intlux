@@ -579,21 +579,49 @@ artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootS
 
 
 
+    $rootScope.isAdmin = false;
 
     /*
     *  JQUERY FUNCTIONS
     * */
     $(document).ready(function() {
+
         $('a.link-nav[href^="#"]').on('click',function (e) {
             e.preventDefault();
             var target = this.hash;
             $target = $(target);
-            $('html, body').stop().animate({
-                'scrollTop':  $target.offset().top //no need of parseInt here
-            }, 900, 'swing', function () {
-                window.location.hash = target;
+            if ($target.offset()) {
+                $('html, body').stop().animate({
+                    'scrollTop':  $target.offset().top //no need of parseInt here
+                }, 900, 'swing', function () {
+                    window.location.hash = target;
+                });
+            } else {
+                $location.path('/');
+            }
+        });
+
+        $('#SkypeButton_Call').load(function() {
+            Skype.ui({
+                "name": "call",
+                "element": "SkypeButton_Call",
+                "participants": ["intlux.energy"],
+                "imageSize": 32
             });
         });
+
+        function goToBlock(newTarget) {
+            if (newTarget) {
+                var target = newTarget;
+                $target = $(target);
+                $('html, body').stop().animate({
+                    'scrollTop':  $target.offset().top //no need of parseInt here
+                }, 900, 'swing', function () {
+                    window.location.hash = target;
+                });
+            }
+        }
+        //goToBlock($rootScope.newTarget);
 
         $('footer').removeClass('resized-footer');
         $('.back-to-top').addClass('top-3');
@@ -637,6 +665,16 @@ artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootS
             });
         });
 
+        $('.dropdown-hover').mouseover(function() {
+            $('.'+$(this).attr('data-dropdown-item')).show();
+        }).mouseout(function() {
+            $('.'+$(this).attr('data-dropdown-item')).hide();
+        });
+        $('.dropdown-menu-hover').mouseover(function() {
+            $(this).show();
+        }).mouseout(function() {
+            $(this).hide();
+        });
 
 
 

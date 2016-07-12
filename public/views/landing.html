@@ -101,7 +101,7 @@
 </div>
 
 <!-- /.content-section-a -->
-<div class="content-section-b" id="our_missions">
+<div class="content-section-b dark-bg" id="our_missions">
 
     <div class="container">
         <div class="row">
@@ -271,7 +271,7 @@
 </div>
 <!-- /.content-section-b -->
 
-<div class="content-section-b" id="products-container">
+<div class="content-section-b dark-bg" id="products-container">
 
     <div class="container">
 
@@ -282,7 +282,7 @@
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" ng-repeat="product in products">
                 <h6 class="text-center">{{product.name}}</h6>
                 <img ng-click="productCategories(product);" ng-src="{{product.img}}" alt="" class="img-responsive">
-                <p class="text-center">{{product.descriptionSmall}}</p>
+                <!--<p class="text-center">{{product.desriptionSmall}}</p>-->
             </div>
         </div>
 
@@ -303,7 +303,7 @@
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" ng-repeat="service in services">
                 <h6 class="text-center">{{service.name}}</h6>
                 <img ng-click="serviceCategories(service);" ng-src="{{service.img}}" alt="" class="img-responsive">
-                <p class="text-center">{{service.descriptionSmall}}</p>
+                <!--<p class="text-center">{{service.descriptionSmall}}</p>-->
             </div>
         </div>
 
@@ -317,115 +317,117 @@
 <a  name="contact"></a>
 <div class="">
 
-    <div class="container" id="contacts">
+    <div class="content-section-b dark-bg" id="contacts">
 
-        <div class="row">
-            <h2 class="border-light">Напишите нам</h2>
+        <div class="container">
+            <div class="row">
+                <h2 class="border-light">Напишите нам</h2>
 
-            <div class="col-sm-6">
-                <form class="form-inline">
-                    <div class="col-xs-12 text-center">
-                        <div class="form-group margin-right">
-                            <label for="input-name">Имя</label>
-                            <input type="text" class="form-control" id="input-name" placeholder="">
+                <div class="col-sm-6">
+                    <form class="form-inline">
+                        <div class="col-xs-12 text-center">
+                            <div class="form-group margin-right">
+                                <label for="input-name">Имя</label>
+                                <input type="text" class="form-control" id="input-name" placeholder="">
+                            </div>
+                            <div class="form-group margin-left">
+                                <label for="input-email">Почтовый адресс</label>
+                                <input type="email" class="form-control" id="input-email" placeholder="">
+                            </div>
                         </div>
-                        <div class="form-group margin-left">
-                            <label for="input-email">Почтовый адресс</label>
-                            <input type="email" class="form-control" id="input-email" placeholder="">
+                        <div class="col-xs-12 text-center">
+                            <div class="form-group margin-right">
+                                <label for="input-city">Город</label>
+                                <input type="text" class="form-control" id="input-city" placeholder="">
+                            </div>
+                            <div class="form-group margin-left">
+                                <label for="input-phone">Номер телефона</label>
+                                <input type="number" class="form-control" id="input-phone" placeholder="">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-xs-12 text-center">
-                        <div class="form-group margin-right">
-                            <label for="input-city">Город</label>
-                            <input type="text" class="form-control" id="input-city" placeholder="">
+                        <div class="col-xs-12 text-center">
+                            <div class="form-group">
+                                <label for="form-textarea">Сообщение</label>
+                                <textarea class="form-control" id="form-textarea" rows="5"></textarea>
+                            </div>
                         </div>
-                        <div class="form-group margin-left">
-                            <label for="input-phone">Номер телефона</label>
-                            <input type="number" class="form-control" id="input-phone" placeholder="">
-                        </div>
-                    </div>
-                    <div class="col-xs-12 text-center">
-                        <div class="form-group">
-                            <label for="form-textarea">Сообщение</label>
-                            <textarea class="form-control" id="form-textarea" rows="5"></textarea>
-                        </div>
-                    </div>
 
-                    <button type="submit" class="btn send-btn">Отправить</button>
-                </form>
+                        <button type="submit" class="btn send-btn">Отправить</button>
+                    </form>
+                </div>
+
+                <div class="col-lg-6 no-padding">
+                    <br><br>
+                    <div class="col-sm-6">
+                        <p><b>Управляющий директор:</b> Максим Поляков
+                            <br>
+                            +442081333099
+                            <br>
+                            MaximPolyakov@intluxenergy.com
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p><b>Главный технический директор:</b> Михаил Панов
+                            <br>
+                            +442081333099
+                            <br>
+                            m.panov@intluxenergy.com
+                        </p>
+                    </div>
+                    <br>
+                    <div class="col-sm-6">
+                        <p><b>Коммерческий директор:</b> Алексей Моисеев
+                            <br>
+                            +442081333099
+                            <br>
+                            +380675587890
+                            <br>
+                            amoiseev@intluxenergy.com
+                        </p>
+                    </div>
+                    <br>
+                    <div class="col-sm-6">
+                        <p><b>Менеджер по логистике:</b> Артур Садко
+                            <br>
+                            +442081333099
+                            <br>
+                            Arthur.Sadko@intluxenergy.com
+                        </p>
+                    </div>
+                    <br>
+                    <div class="col-sm-6">
+                        <p><b>Менеджер по поставкам:</b> Сара Шмидт
+                            <br>
+                            +442081333099
+                            <br>
+                            Sara.Shmidt@intluxenergy.com
+                        </p>
+                    </div>
+                    <br>
+                    <div class="col-sm-12">
+                        <p><b>Менеджер по продажам Украина:</b> Леонид Соловьёв
+                            <br>
+                            +442081333099
+                            <br>
+                            +380939728256
+                            <br>
+                            leonid.solovyov@intluxenergy.com
+                        </p>
+                    </div>
+                    <br>
+                    <div class="col-sm-12">
+                        <p><b>Менеджер по продажам Россия, Узбекистан, Казахстан, Туркменистан:</b> Виталий Накутный
+                            <br>
+                            +442081333099
+                            <br>
+                            +380663243638
+                            <br>
+                            vitalii.nakutnyj@intluxenergy.com
+                        </p>
+                    </div>
+                </div>
+
             </div>
-
-            <div class="col-lg-6 no-padding">
-                <br><br>
-                <div class="col-sm-6">
-                    <p><b>Управляющий директор:</b> Максим Поляков
-                        <br>
-                        +442081333099
-                        <br>
-                        MaximPolyakov@intluxenergy.com
-                    </p>
-                </div>
-                <div class="col-sm-6">
-                    <p><b>Главный технический директор:</b> Михаил Панов
-                        <br>
-                        +442081333099
-                        <br>
-                        m.panov@intluxenergy.com
-                    </p>
-                </div>
-                <br>
-                <div class="col-sm-6">
-                    <p><b>Коммерческий директор:</b> Алексей Моисеев
-                        <br>
-                        +442081333099
-                        <br>
-                        +380675587890
-                        <br>
-                        amoiseev@intluxenergy.com
-                    </p>
-                </div>
-                <br>
-                <div class="col-sm-6">
-                    <p><b>Менеджер по логистике:</b> Артур Садко
-                        <br>
-                        +442081333099
-                        <br>
-                        Arthur.Sadko@intluxenergy.com
-                    </p>
-                </div>
-                <br>
-                <div class="col-sm-6">
-                    <p><b>Менеджер по поставкам:</b> Сара Шмидт
-                        <br>
-                        +442081333099
-                        <br>
-                        Sara.Shmidt@intluxenergy.com
-                    </p>
-                </div>
-                <br>
-                <div class="col-sm-12">
-                    <p><b>Менеджер по продажам Украина:</b> Леонид Соловьёв
-                        <br>
-                        +442081333099
-                        <br>
-                        +380939728256
-                        <br>
-                        leonid.solovyov@intluxenergy.com
-                    </p>
-                </div>
-                <br>
-                <div class="col-sm-12">
-                    <p><b>Менеджер по продажам Россия, Узбекистан, Казахстан, Туркменистан:</b> Виталий Накутный
-                        <br>
-                        +442081333099
-                        <br>
-                        +380663243638
-                        <br>
-                        vitalii.nakutnyj@intluxenergy.com
-                    </p>
-                </div>
-            </div>
-
         </div>
 
     </div>

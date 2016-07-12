@@ -19,8 +19,6 @@ artVikonce.controller('AdminNewsController', ['$scope', '$rootScope', '$http', f
 
 
 
-
-
     $scope.src = '';
 
 
@@ -53,10 +51,6 @@ artVikonce.controller('AdminNewsController', ['$scope', '$rootScope', '$http', f
         xhr.open('GET', url);
         xhr.send();
     }
-
-    //document.getElementsByClassName('click')[0].onclick = function() {
-    //
-    //};
 
     $scope.save = function() {
         var src = document.getElementsByTagName('img')[0].src;

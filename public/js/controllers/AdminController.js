@@ -73,8 +73,10 @@ artVikonce.controller('AdminController', ['$scope', '$rootScope', '$http', '$loc
             $('[data-toggle="offcanvas"]').click(function () {
                 $('#wrapper').toggleClass('toggled');
             });
+
         });
     };
+
 
 
 
