@@ -600,6 +600,19 @@ artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootS
                 $location.path('/');
             }
         });
+        $('a.back-to-top').on('click',function (e) {
+            var target = this.hash;
+            $target = $(target);
+            if ($target.offset()) {
+                $('html, body').stop().animate({
+                    'scrollTop':  $target.offset().top //no need of parseInt here
+                }, 900, 'swing', function () {
+                    window.location.hash = target;
+                });
+            } else {
+                $location.path('/');
+            }
+        });
 
         $('#SkypeButton_Call').load(function() {
             Skype.ui({
