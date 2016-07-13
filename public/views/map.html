@@ -1,6 +1,6 @@
 <div ng-controller="MapController" id="map-container">
     <br>
-    <h1 class="text-center">География продаж</h1>
+    <h1 class="text-center">Сферы влияния</h1>
     <br>
     <div class="col-sm-7">
         <div id='map'></div>
@@ -8,16 +8,34 @@
     <div class="col-sm-5">
         <ul>
             <li>
-                <label for="test_1">Test 1</label>
-                <input type="checkbox" ng-click="changeMarker()" id="test_1">
+                <label for="test_1">География проектов</label>
+                <input type="checkbox" id="test_1">
             </li>
             <li>
-                <label for="test_2">Test 2</label>
+                <label for="test_2">Геогравия продукции</label>
                 <input type="checkbox" id="test_2">
             </li>
             <li>
-                <label for="test_3">Test 3</label>
-                <input type="checkbox" id="test_3">
+                <label for="test_3">Представительства</label>
+                <input ng-click="changeMarkersForAll()" value="1" name="fooby" type="checkbox" id="test_3">
+                <ul>
+                    <li>
+                        <label for="test_4">Intlux KZ</label>
+                        <input ng-click="changeMarkerKZ()" value="1" name="fooby" type="checkbox" id="test_4">
+                    </li>
+                    <li>
+                        <label for="test_5">Intlux USA</label>
+                        <input ng-click="changeMarkerUSA()" value="1" name="fooby" type="checkbox" id="test_5">
+                    </li>
+                    <li>
+                        <label for="test_6">Intlux UA</label>
+                        <input ng-click="changeMarkerUA()" value="1" name="fooby" type="checkbox" id="test_6">
+                    </li>
+                    <li>
+                        <label for="test_7">Intlux RU</label>
+                        <input ng-click="changeMarkerRU()" value="1" name="fooby" type="checkbox" id="test_7">
+                    </li>
+                </ul>
             </li>
         </ul>
     </div>

@@ -88,6 +88,63 @@ artVikonce.controller('MapController', ['$scope', function($scope) {
 
 
 
+    $scope.kz = [{
+      lng:'52.2740100',
+        lt:'77.0043800'
+    }];
+    $scope.usa = [
+    {
+        lng:'40.71427',
+            lt:'-74.00597'
+    }
+    ];
+    $scope.ua = [
+        {
+      lng:'46.4774700',
+        lt:'30.7326200'
+        },
+        {
+            lng:'50.4546600',
+            lt:'30.5238000'
+        }
+    ];
+    $scope.ru = [
+        {
+      lng:'55.75222',
+        lt:'37.61556'
+        },
+        {
+            lng:'58.0104600',
+            lt:'56.2501700'
+        }
+    ];
+
+    $scope.allCoord = [
+        {
+            lng:'52.2740100',
+            lt:'77.0043800'
+        },
+        {
+            lng:'40.71427',
+            lt:'-74.00597'
+        },
+        {
+            lng:'46.4774700',
+            lt:'30.7326200'
+        },
+        {
+            lng:'50.4546600',
+            lt:'30.5238000'
+        },
+        {
+            lng:'55.75222',
+            lt:'37.61556'
+        },
+        {
+            lng:'58.0104600',
+            lt:'56.2501700'
+        }
+    ];
 
 
 
@@ -132,30 +189,61 @@ artVikonce.controller('MapController', ['$scope', function($scope) {
         setMapOnAll(map);
     }
 
-    $scope.changeMarker = function() {
-        map.setCenter(-34.397, 150.644);
+    function changeMarker(obj) {
         clearMarkers();
         map.markers = [];
-        map.addMarker({
-            lat: -34.397,
-            lng: 150.644,
-            icon: "../../img/rsz_1marker.png",
-            title: 'Lima',
-            details: {
-                database_id: 42,
-                author: 'HPNeo'
-            },
-            click: function(e){
-                if(console.log)
-                    console.log(e);
-            },
-            mouseover: function(e){
-                if(console.log)
-                    console.log(e);
-            }
+        obj.forEach(function(child){
+            map.setCenter(child.lng, child.lt);
+            map.addMarker({
+                lat: child.lng,
+                lng: child.lt,
+                icon: "../../img/rsz_1marker.png",
+                title: 'Lima',
+                details: {
+                    database_id: 42,
+                    author: 'HPNeo'
+                },
+                click: function(e){
+                    if(console.log)
+                        console.log(e);
+                },
+                mouseover: function(e){
+                    if(console.log)
+                        console.log(e);
+                }
+            });
         });
+        map.refresh();
         console.log(map);
+    }
+
+
+    $scope.changeMarkersForAll = function() {
+        console.log(map);
+        map.map.zoom = 6;
+        changeMarker($scope.allCoord);
     };
+
+    $scope.changeMarkerKZ = function() {
+        changeMarker($scope.kz);
+    };
+    $scope.changeMarkerUSA = function() {
+        changeMarker($scope.usa);
+    };
+    $scope.changeMarkerUA = function() {
+        changeMarker($scope.ua);
+    };
+    $scope.changeMarkerRU = function() {
+        changeMarker($scope.ru);
+    };
+
+
+    $(':checkbox').on('change',function(){
+        var th = $(this), name = th.prop('name');
+        if(th.is(':checked')){
+            $(':checkbox[name="'  + name + '"]').not($(this)).prop('checked',false);
+        }
+    });
 
 
 
