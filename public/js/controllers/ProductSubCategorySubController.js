@@ -21,7 +21,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'223'
+                    'id':'223',
+                    'parentId':'145531'
                 },
                 {
                     'name':'Поршневые',
@@ -30,7 +31,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'564'
+                    'id':'564',
+                    'parentId':'145531'
                 },
                 {
                     'name':'Роторные',
@@ -39,7 +41,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'654'
+                    'id':'654',
+                    'parentId':'145531'
                 },
                 {
                     'name':'Вакуумные',
@@ -48,7 +51,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'866'
+                    'id':'866',
+                    'parentId':'145531'
                 },
                 {
                     'name':'Прочие',
@@ -57,7 +61,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'34456'
+                    'id':'34456',
+                    'parentId':'145531'
                 }
             ],
             'id':'145531'
@@ -73,7 +78,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'73567'
+                    'id':'73567',
+                    'prentId':'868634'
                 },
                 {
                     'name':'Двойное',
@@ -82,7 +88,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'87487'
+                    'id':'87487',
+                    'prentId':'868634'
                 },
                 {
                     'name':'Тандем',
@@ -91,7 +98,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'9997777'
+                    'id':'9997777',
+                    'prentId':'868634'
                 },
                 {
                     'name':'Картриджного типа',
@@ -100,7 +108,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'124555'
+                    'id':'124555',
+                    'prentId':'868634'
                 },
                 {
                     'name':'Газодинамическое',
@@ -109,7 +118,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'54422'
+                    'id':'54422',
+                    'prentId':'868634'
                 },
                 {
                     'name':'Сухое газовое',
@@ -118,7 +128,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'9876'
+                    'id':'9876',
+                    'prentId':'868634'
                 }
             ],
             'img':'img/default-image.png',
@@ -139,7 +150,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'112233'
+                    'id':'112233',
+                    'parentId':'385699'
                 },
                 {
                     'name':'Осевые',
@@ -148,7 +160,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'46446'
+                    'id':'46446',
+                    'parentId':'385699'
                 },
                 {
                     'name':'Вихревые',
@@ -157,7 +170,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'573466'
+                    'id':'573466',
+                    'parentId':'385699'
                 },
                 {
                     'name':'Поршневые',
@@ -166,7 +180,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'67457'
+                    'id':'67457',
+                    'parentId':'385699'
                 },
                 {
                     'name':'Роторные',
@@ -175,7 +190,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'625235'
+                    'id':'625235',
+                    'parentId':'385699'
                 },
                 {
                     'name':'Прочие',
@@ -184,7 +200,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'7788'
+                    'id':'7788',
+                    'parentId':'385699'
                 }
             ],
             'id':'385699'
@@ -205,7 +222,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'003554'
+                    'id':'003554',
+                    'parentId':'890776'
                 },
                 {
                     'name':'Постоянного тока',
@@ -214,7 +232,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'003434'
+                    'id':'003434',
+                    'parentId':'890776'
                 }
             ]
         },
@@ -233,7 +252,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'03434'
+                    'id':'03434',
+                    'prentId':'133755'
                 },
                 {
                     'name':'Сетчатые',
@@ -242,7 +262,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'034332'
+                    'id':'034332',
+                    'prentId':'133755'
                 },
                 {
                     'name':'Сепараторы',
@@ -251,7 +272,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'234455'
+                    'id':'234455',
+                    'prentId':'133755'
                 },
                 {
                     'name':'Скрубберы',
@@ -260,119 +282,151 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'subCategories':[
-                        {
-                            'name':'ПРИНЦИП ТИПОЛОГИИ',
-                            'descriptionSmall':'Описание категории',
-                            'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
-                            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
-                            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
-                            'img':'img/default-image.png',
-                            'id':'12445667'
-                        },
-                        {
-                            'name':'Test',
-                            'descriptionSmall':'Описание категории',
-                            'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
-                            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
-                            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
-                            'img':'img/default-image.png',
-                            'id':'6567788'
-                        }
-                    ],
-                    'id':'3465700'
+                    'id':'3465700',
+                    'prentId':'133755'
                 }
             ],
             'id':'133755'
         },
         {
-            'name':'Категория',
+            'name':'УСТАНОВКИ ГАЗА',
             'descriptionSmall':'Описание категории',
             'subCategories':[
                 {
-                    'name':'Подкатегория',
+                    'name':'Осушки',
                     'descriptionSmall':'Описание категории',
                     'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'8777'
+                    'id':'8777',
+                    'parentId':'929292'
                 },
                 {
-                    'name':'Подкатегория',
+                    'name':'Нагрев газа',
                     'descriptionSmall':'Описание категории',
                     'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'3777'
+                    'id':'3777',
+                    'parentId':'929292'
                 },
                 {
-                    'name':'Подкатегория',
+                    'name':'Бустреные',
                     'descriptionSmall':'Описание категории',
                     'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'2333'
+                    'id':'2333',
+                    'parentId':'929292'
                 },
                 {
-                    'name':'Подкатегория',
+                    'name':'Разделение азота',
                     'descriptionSmall':'Описание категории',
                     'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'74676'
+                    'id':'74676',
+                    'parentId':'929292'
                 }
             ],
             'img':'img/default-image.png',
             'id':'929292'
         },
         {
-            'name':'Категория',
+            'name':'БУРОВОЕ ОБОРУДОВАНИЕ',
             'descriptionSmall':'Описание категории',
             'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
+            'subCategories':[
+                {
+                    'name':'Долота',
+                    'descriptionSmall':'Описание категории',
+                    'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+                    'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+                    'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
+                    'img':'img/default-image.png',
+                    'id':'39799',
+                    'parentId':'887387'
+                },
+                {
+                    'name':'Бурильные трубы',
+                    'descriptionSmall':'Описание категории',
+                    'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+                    'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+                    'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
+                    'img':'img/default-image.png',
+                    'id':'093232',
+                    'parentId':'887387'
+                },
+                {
+                    'name':'Забойные двигатели',
+                    'descriptionSmall':'Описание категории',
+                    'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+                    'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+                    'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
+                    'img':'img/default-image.png',
+                    'id':'11455',
+                    'parentId':'887387'
+                }
+            ],
             'id':'887387'
         },
         {
-            'name':'Категория',
+            'name':'ЗАПОРНАЯ АРМАТУРА',
             'descriptionSmall':'Описание категории',
             'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
+            'subCategories':[
+                {
+                    'name':'Клапаны',
+                    'descriptionSmall':'Описание категории',
+                    'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+                    'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+                    'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
+                    'img':'img/default-image.png',
+                    'id':'321008',
+                    'parentId':'372222'
+                },
+                {
+                    'name':'Вентили',
+                    'descriptionSmall':'Описание категории',
+                    'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+                    'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+                    'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
+                    'img':'img/default-image.png',
+                    'id':'34080',
+                    'parentId':'372222'
+                },
+                {
+                    'name':'Заглушки',
+                    'descriptionSmall':'Описание категории',
+                    'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+                    'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+                    'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
+                    'img':'img/default-image.png',
+                    'id':'003445',
+                    'parentId':'372222'
+                },
+                {
+                    'name':'Фланцы',
+                    'descriptionSmall':'Описание категории',
+                    'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+                    'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+                    'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
+                    'img':'img/default-image.png',
+                    'id':'02233',
+                    'parentId':'372222'
+                }
+            ],
             'id':'372222'
-        },
-        {
-            'name':'Коалессоры',
-            'descriptionSmall':'Описание категории',
-            'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
-            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
-            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
-            'img':'img/default-image.png',
-            'id':'03434'
-        },
-        {
-            'name':'Сетчатые',
-            'descriptionSmall':'Описание категории',
-            'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
-            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
-            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
-            'img':'img/default-image.png',
-            'id':'034332'
-        },
-        {
-            'name':'Сепараторы',
-            'descriptionSmall':'Описание категории',
-            'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
-            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
-            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
-            'img':'img/default-image.png',
-            'id':'234455'
         }
     ];
 
@@ -391,7 +445,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
-            'id':'223'
+            'id':'223',
+            'parentId':'145531'
         },
         {
             'name':'Поршневые',
@@ -400,7 +455,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
-            'id':'564'
+            'id':'564',
+            'parentId':'145531'
         },
         {
             'name':'Роторные',
@@ -409,7 +465,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
-            'id':'654'
+            'id':'654',
+            'parentId':'145531'
         },
         {
             'name':'Вакуумные',
@@ -418,7 +475,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
-            'id':'866'
+            'id':'866',
+            'parentId':'145531'
         },
         {
             'name':'Прочие',
@@ -427,7 +485,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
-            'id':'34456'
+            'id':'34456',
+            'parentId':'145531'
         },
         {
             'name':'Одинарное',
@@ -436,7 +495,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
-            'id':'73567'
+            'id':'73567',
+            'prentId':'868634'
         },
         {
             'name':'Двойное',
@@ -445,7 +505,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
-            'id':'87487'
+            'id':'87487',
+            'prentId':'868634'
         },
         {
             'name':'Тандем',
@@ -454,7 +515,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
-            'id':'9997777'
+            'id':'9997777',
+            'prentId':'868634'
         },
         {
             'name':'Картриджного типа',
@@ -463,7 +525,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
-            'id':'124555'
+            'id':'124555',
+            'prentId':'868634'
         },
         {
             'name':'Газодинамическое',
@@ -472,7 +535,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
-            'id':'54422'
+            'id':'54422',
+            'prentId':'868634'
         },
         {
             'name':'Сухое газовое',
@@ -481,7 +545,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
-            'id':'9876'
+            'id':'9876',
+            'prentId':'868634'
         },
         {
             'name':'Центробежные',
@@ -490,7 +555,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
-            'id':'112233'
+            'id':'112233',
+            'parentId':'385699'
         },
         {
             'name':'Осевые',
@@ -499,7 +565,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
-            'id':'46446'
+            'id':'46446',
+            'parentId':'385699'
         },
         {
             'name':'Вихревые',
@@ -508,7 +575,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
-            'id':'573466'
+            'id':'573466',
+            'parentId':'385699'
         },
         {
             'name':'Поршневые',
@@ -517,7 +585,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
-            'id':'67457'
+            'id':'67457',
+            'parentId':'385699'
         },
         {
             'name':'Роторные',
@@ -526,7 +595,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
-            'id':'625235'
+            'id':'625235',
+            'parentId':'385699'
         },
         {
             'name':'Прочие',
@@ -535,7 +605,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
-            'id':'7788'
+            'id':'7788',
+            'parentId':'385699'
         },
         {
             'name':'Переменного тока',
@@ -544,7 +615,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
-            'id':'003554'
+            'id':'003554',
+            'parentId':'890776'
         },
         {
             'name':'Постоянного тока',
@@ -553,7 +625,38 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
-            'id':'003434'
+            'id':'003434',
+            'parentId':'890776'
+        },
+        {
+            'name':'Коалессоры',
+            'descriptionSmall':'Описание категории',
+            'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
+            'img':'img/default-image.png',
+            'id':'03434',
+            'prentId':'133755'
+        },
+        {
+            'name':'Сетчатые',
+            'descriptionSmall':'Описание категории',
+            'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
+            'img':'img/default-image.png',
+            'id':'034332',
+            'prentId':'133755'
+        },
+        {
+            'name':'Сепараторы',
+            'descriptionSmall':'Описание категории',
+            'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
+            'img':'img/default-image.png',
+            'id':'234455',
+            'prentId':'133755'
         },
         {
             'name':'Скрубберы',
@@ -562,45 +665,118 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
-            'subCategories':[
-                {
-                    'name':'ПРИНЦИП ТИПОЛОГИИ',
-                    'descriptionSmall':'Описание категории',
-                    'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
-                    'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
-                    'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
-                    'img':'img/default-image.png',
-                    'id':'12445667'
-                },
-                {
-                    'name':'Test',
-                    'descriptionSmall':'Описание категории',
-                    'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
-                    'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
-                    'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
-                    'img':'img/default-image.png',
-                    'id':'6567788'
-                }
-            ],
-            'id':'3465700'
+            'id':'3465700',
+            'prentId':'133755'
         },
         {
-            'name':'ПРИНЦИП ТИПОЛОГИИ',
+            'name':'Осушки',
             'descriptionSmall':'Описание категории',
             'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
-            'id':'12445667'
+            'id':'8777',
+            'parentId':'929292'
         },
         {
-            'name':'Test',
+            'name':'Нагрев газа',
             'descriptionSmall':'Описание категории',
             'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
-            'id':'6567788'
+            'id':'3777',
+            'parentId':'929292'
+        },
+        {
+            'name':'Бустреные',
+            'descriptionSmall':'Описание категории',
+            'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
+            'img':'img/default-image.png',
+            'id':'2333',
+            'parentId':'929292'
+        },
+        {
+            'name':'Разделение азота',
+            'descriptionSmall':'Описание категории',
+            'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
+            'img':'img/default-image.png',
+            'id':'74676',
+            'parentId':'929292'
+        },
+        {
+            'name':'Долота',
+            'descriptionSmall':'Описание категории',
+            'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
+            'img':'img/default-image.png',
+            'id':'39799',
+            'parentId':'887387'
+        },
+        {
+            'name':'Бурильные трубы',
+            'descriptionSmall':'Описание категории',
+            'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
+            'img':'img/default-image.png',
+            'id':'093232',
+            'parentId':'887387'
+        },
+        {
+            'name':'Забойные двигатели',
+            'descriptionSmall':'Описание категории',
+            'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
+            'img':'img/default-image.png',
+            'id':'11455',
+            'parentId':'887387'
+        },
+        {
+            'name':'Клапаны',
+            'descriptionSmall':'Описание категории',
+            'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
+            'img':'img/default-image.png',
+            'id':'321008',
+            'parentId':'372222'
+        },
+        {
+            'name':'Вентили',
+            'descriptionSmall':'Описание категории',
+            'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
+            'img':'img/default-image.png',
+            'id':'34080',
+            'parentId':'372222'
+        },
+        {
+            'name':'Заглушки',
+            'descriptionSmall':'Описание категории',
+            'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
+            'img':'img/default-image.png',
+            'id':'003445',
+            'parentId':'372222'
+        },
+        {
+            'name':'Фланцы',
+            'descriptionSmall':'Описание категории',
+            'descriptionBig':'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
+            'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
+            'img':'img/default-image.png',
+            'id':'02233',
+            'parentId':'372222'
         }
     ];
 
@@ -628,7 +804,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'865656'
+                    'id':'865656',
+                    'parentId':'463333'
                 },
                 {
                     'name':'Проведение модернизации центробежных компрессоров',
@@ -645,7 +822,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                             'img':'img/default-image.png',
-                            'id':'235322'
+                            'id':'235322',
+                            'parentId':'1342'
                         },
                         {
                             'name':'Замена подшипников на современные высокотехнологические с конструкцией сухой-картер',
@@ -654,7 +832,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                             'img':'img/default-image.png',
-                            'id':'885600'
+                            'id':'885600',
+                            'parentId':'1342'
                         },
                         {
                             'name':'Замена зубчатых муфт на современные высокотехнологические пластинчатые муфты',
@@ -663,7 +842,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                             'img':'img/default-image.png',
-                            'id':'95677'
+                            'id':'95677',
+                            'parentId':'1342'
                         },
                         {
                             'name':'Замена устаревших технических систем обеспечения работы компрессора на новые',
@@ -672,7 +852,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                             'img':'img/default-image.png',
-                            'id':'003434'
+                            'id':'754874',
+                            'parentId':'1342'
                         },
                         {
                             'name':'Замена системы САУ компрессоров',
@@ -681,10 +862,12 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                             'img':'img/default-image.png',
-                            'id':'422322'
+                            'id':'422322',
+                            'parentId':'1342'
                         }
                     ],
-                    'id':'1342'
+                    'id':'1342',
+                    'parentId':'463333'
                 },
                 {
                     'name':'Сервисное обслуживание ЦК',
@@ -693,7 +876,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'231134'
+                    'id':'231134',
+                    'parentId':'463333'
                 }
             ],
             'id':'463333'
@@ -745,6 +929,9 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
         }
     ];
 
+
+
+
     $scope.subServices = [
         {
             'name':'Проведение реконструкции ЦК с последующим изменением параметров работы',
@@ -753,7 +940,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
-            'id':'865656'
+            'id':'865656',
+            'parentId':'463333'
         },
         {
             'name':'Проведение модернизации центробежных компрессоров',
@@ -770,7 +958,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'235322'
+                    'id':'235322',
+                    'parentId':'1342'
                 },
                 {
                     'name':'Замена подшипников на современные высокотехнологические с конструкцией сухой-картер',
@@ -779,7 +968,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'885600'
+                    'id':'885600',
+                    'parentId':'1342'
                 },
                 {
                     'name':'Замена зубчатых муфт на современные высокотехнологические пластинчатые муфты',
@@ -788,7 +978,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'95677'
+                    'id':'95677',
+                    'parentId':'1342'
                 },
                 {
                     'name':'Замена устаревших технических систем обеспечения работы компрессора на новые',
@@ -797,7 +988,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'003434'
+                    'id':'754874',
+                    'parentId':'1342'
                 },
                 {
                     'name':'Замена системы САУ компрессоров',
@@ -806,10 +998,12 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
                     'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
                     'img':'img/default-image.png',
-                    'id':'422322'
+                    'id':'422322',
+                    'parentId':'1342'
                 }
             ],
-            'id':'1342'
+            'id':'1342',
+            'parentId':'463333'
         },
         {
             'name':'Сервисное обслуживание ЦК',
@@ -818,7 +1012,8 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
-            'id':'231134'
+            'id':'231134',
+            'parentId':'463333'
         },
         {
             'name':'Замена маслосистемы компрессора на СГУ с выполнением полного комплекса под ключ',
@@ -827,7 +1022,9 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
-            'id':'235322'
+            'id':'235322',
+            'parentId':'1342',
+            'isSubservice':true
         },
         {
             'name':'Замена подшипников на современные высокотехнологические с конструкцией сухой-картер',
@@ -836,7 +1033,9 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
-            'id':'885600'
+            'id':'885600',
+            'parentId':'1342',
+            'isSubservice':true
         },
         {
             'name':'Замена зубчатых муфт на современные высокотехнологические пластинчатые муфты',
@@ -845,7 +1044,9 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
-            'id':'95677'
+            'id':'95677',
+            'parentId':'1342',
+            'isSubservice':true
         },
         {
             'name':'Замена устаревших технических систем обеспечения работы компрессора на новые',
@@ -854,7 +1055,9 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
-            'id':'003434'
+            'id':'754874',
+            'parentId':'1342',
+            'isSubservice':true
         },
         {
             'name':'Замена системы САУ компрессоров',
@@ -863,7 +1066,9 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.' +
             'Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet. Lorem ipsum dolores sit amet.',
             'img':'img/default-image.png',
-            'id':'422322'
+            'id':'422322',
+            'parentId':'1342',
+            'isSubservice':true
         }
     ];
 
@@ -883,6 +1088,11 @@ artVikonce.controller('SubCategorySubController', ['$scope', '$stateParams', '$l
     }
 
     console.log($scope.products);
+
+    $scope.goBack = function(product) {
+        console.log(product);
+        $location.path('/service/subcategory/'+ product.parentId);
+    };
 
     //$scope.productCategories = function(product) {
     //    $location.path('/product/category/'+ product.id);

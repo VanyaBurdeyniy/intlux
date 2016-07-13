@@ -870,7 +870,9 @@ html {
 
 
 
-
+nav a {
+    cursor:pointer;
+}
 
 
 

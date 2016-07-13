@@ -8,6 +8,8 @@
 
         <div class="row product-list" ng-repeat="product in products">
 
+            <a style="cursor:pointer;display:block;position: absolute;font-size: 40px;color: #694e99;" data-scroll-item="#products-container" ng-click="goToBlock(product)"><span class="glyphicon glyphicon-menu-left"></span></a>
+
             <h2 class="border-light">{{product.name}}</h2>
             <br>
 

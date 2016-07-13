@@ -1,8 +1,5 @@
-artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootScope', function($scope, $location, $http, $rootScope) {
- $scope.hello = 'Hello';
-    console.log($scope.hello);
-
-
+artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootScope', '$stateParams',
+    function($scope, $location, $http, $rootScope, $stateParams) {
 
     $scope.productCategories = function(product) {
         if (product.subCategories) {
@@ -581,25 +578,40 @@ artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootS
 
     $rootScope.isAdmin = false;
 
-    /*
-    *  JQUERY FUNCTIONS
-    * */
-    $(document).ready(function() {
 
-        $('a.link-nav[href^="#"]').on('click',function (e) {
-            e.preventDefault();
-            var target = this.hash;
-            $target = $(target);
-            if ($target.offset()) {
+        $scope.goToBlock = function(target) {
+            var target = $(target).attr('data-scroll-item');
+            console.log(window.location.hash);
+            if (window.location.hash !== "#/") {
+                localStorage.setItem('hash', target);
+                $location.path('/');
+            } else {
+                $target = $(target);
                 $('html, body').stop().animate({
                     'scrollTop':  $target.offset().top //no need of parseInt here
                 }, 900, 'swing', function () {
                     window.location.hash = target;
                 });
-            } else {
-                $location.path('/');
             }
-        });
+        };
+
+        function goToBlock(newTarget) {
+            if (newTarget) {
+                var target = newTarget;
+                $target = $(target);
+                $('html, body').stop().animate({
+                    'scrollTop':  $target.offset().top //no need of parseInt here
+                }, 900, 'swing', function () {
+                    window.location.hash = target;
+                });
+            }
+        }
+        goToBlock(localStorage.getItem('hash'));
+
+    /*
+    *  JQUERY FUNCTIONS
+    * */
+    $(document).ready(function() {
         $('a.back-to-top').on('click',function (e) {
             var target = this.hash;
             $target = $(target);
@@ -614,6 +626,17 @@ artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootS
             }
         });
 
+        function checkFirstVisit() {
+            if(document.cookie.indexOf('mycookie')==-1) {
+                document.cookie = 'mycookie=1';
+            }
+            else {
+                localStorage.setItem('hash', '');
+            }
+        }
+
+        checkFirstVisit();
+
         $('#SkypeButton_Call').load(function() {
             Skype.ui({
                 "name": "call",
@@ -622,19 +645,6 @@ artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootS
                 "imageSize": 32
             });
         });
-
-        function goToBlock(newTarget) {
-            if (newTarget) {
-                var target = newTarget;
-                $target = $(target);
-                $('html, body').stop().animate({
-                    'scrollTop':  $target.offset().top //no need of parseInt here
-                }, 900, 'swing', function () {
-                    window.location.hash = target;
-                });
-            }
-        }
-        //goToBlock($rootScope.newTarget);
 
         $('footer').removeClass('resized-footer');
         $('.back-to-top').addClass('top-3');
@@ -660,7 +670,7 @@ artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootS
 
         jQuery(document).on('click', '.mega-dropdown', function(e) {
             e.stopPropagation()
-        })
+        });
 
         $('.product-list div').mouseover(function() {
             $('.product-list div img').css({
