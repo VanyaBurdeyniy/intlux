@@ -626,17 +626,6 @@ artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootS
             }
         });
 
-        function checkFirstVisit() {
-            if(document.cookie.indexOf('mycookie')==-1) {
-                document.cookie = 'mycookie=1';
-            }
-            else {
-                localStorage.setItem('hash', '');
-            }
-        }
-
-        checkFirstVisit();
-
         $('#SkypeButton_Call').load(function() {
             Skype.ui({
                 "name": "call",
