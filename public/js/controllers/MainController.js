@@ -583,7 +583,9 @@ artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootS
             var target = $(target).attr('data-scroll-item');
             console.log(window.location.hash);
             if (window.location.hash !== "#/") {
-                localStorage.setItem('hash', target);
+                if (target) {
+                    localStorage.setItem('hash', target);
+                }
                 $location.path('/');
             } else {
                 $target = $(target);
