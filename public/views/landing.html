@@ -2,7 +2,7 @@
 <a name="about"></a>
 <div class="intro-header">
     <h1 class="text-center slider-title slider-title-color"><span>INTLUX</span> ENERGY</h1>
-    <h4 class="text-center slider-title" style="top: 48%;padding: 0 30px 0 30px;">Мы предлагаем наш опыт и возможности в поставках с решением любых
+    <h4 class="text-center slider-title slider-description" style="top: 48%;padding: 0 30px 0 30px;">Мы предлагаем наш опыт и возможности в поставках с решением любых
         трудностей и нестандартных ситуаций, а не железо и технологии</h4>
     <div id="slider">
         <!-- i put this sizer img to define the aspect ratio -->
@@ -324,7 +324,7 @@
                 <h2 class="border-light">Обратная связь</h2>
 
                 <div class="col-sm-6">
-                    <form class="form-inline">
+                    <form action="mailto:vanyaburd@gmail.com" class="form-inline">
                         <div class="col-xs-12 text-center">
                             <div class="form-group margin-right">
                                 <label for="input-name">Имя</label>
@@ -352,7 +352,7 @@
                             </div>
                         </div>
 
-                        <button type="submit" class="btn send-btn">Отправить</button>
+                        <button ng-click="sendEmail()" type="submit" class="btn send-btn">Отправить</button>
                     </form>
                 </div>
 

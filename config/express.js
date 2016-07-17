@@ -17,6 +17,7 @@ module.exports = function() {
     require('../models/news.model');
     require('../models/product.model');
     require('../models/product.category.model');
+    require('../models/service.model');
 
 	// Enable logger (morgan)
     app.use(morgan('dev'));
@@ -42,6 +43,8 @@ module.exports = function() {
     require('../route/news')(app);
     require('../route/product')(app);
     require('../route/product.category')(app);
+    require('../route/service')(app);
+    require('../route/mail')(app);
 
 	// Setting the app router and static folder
 	//app.use(express.static('../public'));

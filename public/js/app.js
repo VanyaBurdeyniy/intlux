@@ -69,6 +69,10 @@ artVikonce.config(function($stateProvider, $urlRouterProvider, $locationProvider
             controller: 'MapController'
         })
 
+
+        /*
+        *  Admin panel
+        * */
         .state('admin', {
             name: 'admin',
             url: '/admin',
@@ -95,6 +99,13 @@ artVikonce.config(function($stateProvider, $urlRouterProvider, $locationProvider
             url: '/admin/panel/products',
             templateUrl: '../views/admin-products.html',
             controller: 'AdminProductsController'
+        })
+
+        .state('adminServices', {
+            name: 'adminServices',
+            url: '/admin/panel/services',
+            templateUrl: '../views/admin-services.html',
+            controller: 'AdminServicesController'
         })
 
     //$locationProvider.html5Mode(true);

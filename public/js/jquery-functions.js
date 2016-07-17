@@ -21,7 +21,3 @@ $(document).ready(function() {
         })
     });
 });
-
-
-//-webkit-filter:blur(2px);
-//filter: blur(2px);

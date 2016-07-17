@@ -17,6 +17,12 @@ artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootS
         }
     };
 
+        $scope.sendEmail = function() {
+            $http.post('/email/send', {}).then(function() {
+
+            });
+        };
+
 
     $scope.goToNewsDescribe = function(id) {
         $location.path('/news/'+ id);
@@ -597,6 +603,24 @@ artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootS
             }
         };
 
+        $scope.goToTop = function(target) {
+            var target = '#slider';
+            console.log(window.location.hash);
+            if (window.location.hash !== "#/") {
+                if (target) {
+                    localStorage.setItem('hash', target);
+                }
+                $location.path('/');
+            } else {
+                $target = $(target);
+                $('html, body').stop().animate({
+                    'scrollTop':  $target.offset().top //no need of parseInt here
+                }, 900, 'swing', function () {
+                    window.location.hash = target;
+                });
+            }
+        };
+
         function goToBlock(newTarget) {
             if (newTarget) {
                 var target = newTarget;
@@ -626,15 +650,6 @@ artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootS
             } else {
                 $location.path('/');
             }
-        });
-
-        $('#SkypeButton_Call').load(function() {
-            Skype.ui({
-                "name": "call",
-                "element": "SkypeButton_Call",
-                "participants": ["intlux.energy"],
-                "imageSize": 32
-            });
         });
 
         $('footer').removeClass('resized-footer');
