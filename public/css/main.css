@@ -1737,6 +1737,20 @@ p.change-lang a:focus {
     margin: auto;
     float: none;
     margin-bottom: 20px;
+    -webkit-transition: all 0.3s ease-out 0.1s;
+    -moz-transition: all 0.3s ease-out 0.1s;
+    -o-transition: all 0.3s ease-out 0.1s;
+    transition: all 0.3s ease-out 0.1s;
+}
+
+.product-block:hover {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.45);
+    transform: scale(1.1);
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-out 0.1s;
+    -moz-transition: all 0.3s ease-out 0.1s;
+    -o-transition: all 0.3s ease-out 0.1s;
+    transition: all 0.3s ease-out 0.1s;
 }
 
 #services-container .product-block {

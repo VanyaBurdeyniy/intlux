@@ -28,6 +28,7 @@ artVikonce.controller('AdminController', ['$scope', '$rootScope', '$http', '$loc
     });
 
     $scope.changeColor = function (className) {
+        localStorage.setItem('className', className);
         $http.put('/design/edit', {class: className}).then(function(data) {
             console.log(data);
         });

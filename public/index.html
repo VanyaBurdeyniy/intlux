@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="light-dark">
+<html lang="en" class="default">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
@@ -25,7 +25,7 @@
 
 
 </head>
-<body class="light-dark" ng-app="artVikonce">
+<body class="default" ng-app="artVikonce">
 
   <div ng-hide="isAdmin" ng-include src="'views/partials/navbar.html'"></div>
 
@@ -127,6 +127,10 @@
       }
       else {
         localStorage.setItem('hash', '');
+        document.body.className = '';
+        document.getElementsByTagName('html')[0].className = '';
+        $('html').css(localStorage.getItem('className'));
+        $('body').css(localStorage.getItem('className'));
         $('.wrapper-loader').show();
       }
     }
