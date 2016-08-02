@@ -5,6 +5,7 @@ var mongoose = require('mongoose'),
 var ServiceSchema = new Schema({
     title:String,
     decriptionBig: String,
+    hasCategory: Boolean,
     img: {
         name:String,
         path:String,

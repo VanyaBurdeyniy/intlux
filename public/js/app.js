@@ -5,6 +5,8 @@ var artVikonce = angular.module('artVikonce', [
 
 artVikonce.config(function($stateProvider, $urlRouterProvider, $locationProvider)
 {
+
+    $('.wrapper-loader').hide();
     $stateProvider
         .state('index', {
             name: 'index',
@@ -24,14 +26,21 @@ artVikonce.config(function($stateProvider, $urlRouterProvider, $locationProvider
             name: 'service',
             url: '/service/category/:id',
             templateUrl: '../views/service-categories.html',
-            controller: 'ProductCategoriesController'
+            controller: 'ServiceCategoriesController'
         })
 
         .state('service-sub', {
             name: 'service-sub',
             url: '/service/subcategory/:id',
             templateUrl: '../views/service-sub-categories.html',
-            controller: 'ProductSubCategoriesController'
+            controller: 'ServiceSubCategoriesController'
+        })
+
+        .state('service-subcategory-sub', {
+            name: 'service-subcategory-sub',
+            url: '/service/subcategory/sub/:id',
+            templateUrl: '../views/service-subcategory-sub.html',
+            controller: 'ServiceSubCategoriesSubController'
         })
 
         .state('product', {
@@ -101,11 +110,25 @@ artVikonce.config(function($stateProvider, $urlRouterProvider, $locationProvider
             controller: 'AdminProductsController'
         })
 
+        .state('adminProductsEdit', {
+            name: 'adminProductsEdit',
+            url: '/admin/panel/product/edit/:id',
+            templateUrl: '../views/admin-products-edit.html',
+            controller: 'AdminProductsEditController'
+        })
+
         .state('adminServices', {
             name: 'adminServices',
             url: '/admin/panel/services',
             templateUrl: '../views/admin-services.html',
             controller: 'AdminServicesController'
+        })
+
+        .state('adminServicesEdit', {
+            name: 'adminServicesEdit',
+            url: '/admin/panel/services/edit/:id',
+            templateUrl: '../views/admin-services-edit.html',
+            controller: 'AdminServicesEditController'
         })
 
     //$locationProvider.html5Mode(true);

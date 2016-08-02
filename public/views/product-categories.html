@@ -6,26 +6,20 @@
 
             <a style="cursor:pointer;display:block;position: absolute;font-size: 40px;color: #694e99;" ng-click="goBack(product)"><span class="glyphicon glyphicon-menu-left"></span></a>
 
-            <h3 class="text-center">{{product.name}}</h3>
+            <h3 class="text-center">{{product.title}}</h3>
             <br>
 
             <div class="col-lg-5">
-                <img ng-src="{{product.img}}" alt="" class="img-responsive">
+                <img ng-src="{{product.img.path}}" alt="" class="img-responsive">
             </div>
             <div class="col-lg-7">
-                <p>{{product.descriptionBig}}</p>
-                <!--<ul>-->
-                    <!--<li>Выполнение полного комплекса работ от разработки и согласования технического задания на-->
-                        <!--разработку и изготовление компрессора до изготовления компрессора и ввода в эксплуатацию.</li>-->
-                    <!--<li>Выполнение сервиса и техническое обслуживание компрессора.</li>-->
-                    <!--<li>Разработка и создание специальных программ по сервисному обслуживанию с учетом индивидуальных требования Заказчиков.</li>-->
-                    <!--<li>Поставка запчастей.</li>-->
-                    <!--<li>Организация склада запчастей  для компрессоров на территории Заказчика.</li>-->
-                <!--</ul>-->
+                <p ng-bind-html="toTrustedHTML(product.decriptionBig)"></p>
             </div>
         </div>
 
     </div>
+    <br>
+    <br>
     <br>
     <br>
     <br>

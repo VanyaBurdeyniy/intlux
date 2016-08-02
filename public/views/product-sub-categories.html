@@ -6,16 +6,16 @@
 
     <div class="container">
 
-        <div class="row product-list" ng-repeat="product in products">
+        <div class="row product-list">
 
             <a style="cursor:pointer;display:block;position: absolute;font-size: 40px;color: #694e99;" data-scroll-item="#products-container" ng-click="goToBlock()"><span class="glyphicon glyphicon-menu-left"></span></a>
 
-            <h2 class="border-light">{{product.name}}</h2>
+            <h2 class="border-light">{{currentProduct[0].title}}</h2>
             <br>
 
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" ng-repeat="subProduct in product.subCategories">
-                <h6 class="text-center h6-min-height">{{subProduct.name}}</h6>
-                <img ng-click="productCategories(subProduct);" ng-src="{{subProduct.img}}" alt="" class="img-responsive">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" ng-repeat="subProduct in products">
+                <h6 class="text-center h6-min-height">{{subProduct.title}}</h6>
+                <img ng-click="productCategories(subProduct);" ng-src="{{subProduct.img.path}}" alt="" class="img-responsive">
                 <!--<p class="text-center">{{subProduct.descriptionSmall}}</p>-->
             </div>
         </div>

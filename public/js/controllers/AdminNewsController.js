@@ -1,7 +1,9 @@
 artVikonce.controller('AdminNewsController', ['$scope', '$rootScope', '$http', function($scope, $rootScope, $http) {
 
     $rootScope.isAdmin = true;
-    $rootScope.isActiveSidebar = true;
+    $rootScope.isServices = false;
+    $rootScope.isNews = true;
+    $rootScope.isProducts = false;
 
     tinymce.init({
         selector: 'textarea',
@@ -18,51 +20,44 @@ artVikonce.controller('AdminNewsController', ['$scope', '$rootScope', '$http', f
     });
 
 
+    var myDropzone = new Dropzone("form#drop", {
+        uploadMultiple: false, thumbnailWidth: "700",
+        thumbnailHeight: "700"
+    });
+    myDropzone.options.myAwesomeDropzone = {
+        maxFilesize: 2,
+        uploadMultiple: false,
+        thumbnailWidth: "250",
+        thumbnailHeight: "250"
+    };
+    dropzone = myDropzone;
+
+    dropzone.options.myAwesomeDropzone = {
+        init: function () {
+            this.on("addedfile", function (file) {
+                alert("Added file.");
+            });
+        }
+    };
 
     $scope.src = '';
 
-
-    //UPLOAD IMAGE !!!
-
-    $scope.previewFile = function() {
-        var preview = document.querySelector('img');
-        var file    = document.querySelector('input[type=file]').files[0];
-        var reader  = new FileReader();
-
-        reader.addEventListener("load", function () {
-            preview.src = reader.result;
-        }, false);
-
-        if (file) {
-            reader.readAsDataURL(file);
-        }
-    }
-
-    function toDataUrl(url, callback){
-        var xhr = new XMLHttpRequest();
-        xhr.responseType = 'blob';
-        xhr.onload = function() {
-            var reader  = new FileReader();
-            reader.onloadend = function () {
-                callback(reader.result);
-            };
-            reader.readAsDataURL(xhr.response);
-        };
-        xhr.open('GET', url);
-        xhr.send();
-    }
-
-    $scope.save = function() {
-        var src = document.getElementsByTagName('img')[0].src;
-        toDataUrl(src, function(base64Img){
-            alert(base64Img);
-            $scope.src = JSON.stringify(base64Img);
-            alert(typeof base64Img);
+    $('.save').click(function() {
+        $http.post('/news/add', {
+            content:tinyMCE.activeEditor.getContent(),
+            img: {
+                base64: $('.dz-image').children().attr('src'),
+                name: $('.dz-filename').children().text().replace('.', '')
+            },
+            description: $scope.description,
+            title: $scope.title
+        }).then(function(data) {
+            console.log(data);
         });
+    });
+    $scope.saveNews = function() {
 
-        $http.post('/news/add', {content:tinyMCE.activeEditor.getContent(), img: $scope.src}).then(function(data) {
-           console.log(data);
-        });
+
     };
 
 

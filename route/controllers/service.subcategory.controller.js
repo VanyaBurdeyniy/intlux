@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 var mongoose = require('mongoose'),
-    ProductsCategory = mongoose.model('ProductCategory'),
+    ServiceSubCategory = mongoose.model('ServiceSubCategory'),
     path = require('path'),
     fs = require('fs');
 
@@ -45,7 +45,7 @@ exports.add = function(req, res) {
     req.body.img.base64 = '';
 
     // Init Variables
-    var products = new ProductsCategory(req.body);
+    var products = new ServiceSubCategory(req.body);
     var message = null;
 
     // Then save the user
@@ -72,7 +72,7 @@ exports.edit = function(req, res, next) {
     req.body.img.path = 'img/upload/'+req.body.img.name+'.jpg';
     req.body.img.base64 = '';
 
-    ProductsCategory.findOne({ _id: req.body.id }, function (err, doc){
+    ServiceSubCategory.findOne({ _id: req.body.id }, function (err, doc){
         doc.img = req.body.img;
         doc.title = req.body.title;
         console.log(doc.decriptionBig);
@@ -85,20 +85,7 @@ exports.edit = function(req, res, next) {
  * OAuth callback
  */
 exports.get = function(req, res, next) {
-    ProductsCategory.find({productId : req.params.id} || {_id: req.params.id}, function(err, news) {
-        // When an error occurred
-        if (err) {
-            return err;
-        }
-
-        res.jsonp(news);
-
-        return news;
-    });
-};
-
-exports.getOne = function(req, res, next) {
-    ProductsCategory.find({_id: req.params.id}, function(err, news) {
+    ServiceSubCategory.find({}, function(err, news) {
         // When an error occurred
         if (err) {
             return err;

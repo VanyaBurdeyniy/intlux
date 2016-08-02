@@ -66,10 +66,30 @@ exports.add = function(req, res) {
  * Edit
  */
 exports.edit = function(req, res, next) {
-    Products.findByIdAndUpdate(req.body.id, { $set: { news: req.body }}, function (err, tank) {
-        if (err) return handleError(err);
-        res.send(tank);
+
+    var img = req.body.img.base64;
+    var data = img.replace(/^data:image\/\w+;base64,/, "");
+    var buf = new Buffer(data, 'base64');
+    var name = JSON.stringify(Math.floor(Math.random() * 1000));
+    fs.writeFile('public/img/upload/'+req.body.img.name+'.jpg', buf);
+    req.body.img.path = 'img/upload/'+req.body.img.name+'.jpg';
+    req.body.img.base64 = '';
+
+    Products.findOne({ _id: req.body.id }, function (err, doc){
+        doc.img = req.body.img;
+        doc.title = req.body.title;
+        doc.descriptionBig = req.body.descriptionBig;
+        doc.save();
     });
+
+    //Products.find({_id: req.body.id}, function (err, product) {
+    //    if (err) return handleError(err);
+    //
+    //    product = req.body;
+    //    product.save(function(err, data) {
+    //        res.send(data);
+    //    });
+    //});
 };
 
 /**

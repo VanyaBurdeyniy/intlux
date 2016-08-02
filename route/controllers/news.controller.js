@@ -35,6 +35,15 @@ var getErrorMessage = function(err) {
  * Add
  */
 exports.add = function(req, res) {
+
+    var img = req.body.img.base64;
+    var data = img.replace(/^data:image\/\w+;base64,/, "");
+    var buf = new Buffer(data, 'base64');
+    var name = JSON.stringify(Math.floor(Math.random() * 1000));
+    fs.writeFile('public/img/upload/'+req.body.img.name+'.png', buf);
+    req.body.img.path = 'img/upload/'+req.body.img.name+'.png';
+    req.body.img.base64 = '';
+
     // Init Variables
     var news = new News(req.body);
     var message = null;

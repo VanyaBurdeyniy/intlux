@@ -11,11 +11,15 @@
         </button>
         <div class="container">
             <div class="row">
-                <div class="col-lg-5"></div>
-                <div class="col-lg-7">
-                    <div ng-repeat="new in news">
-                        <img ng-src="{{new.img}}" alt="">
-                        <p class="p">{{new.content.innerHTML}}</p>
+                <div class="col-lg-2"></div>
+                <div class="col-lg-10">
+                    <div class="admin-products-wrapper">
+                        <h2 class="text-center">Выбрать дизайн</h2>
+                        <ul>
+                            <li>Первый вариант <button ng-click="changeColor('default')" class="btn btn-primary">Выбрать</button></li>
+                            <li>Второй вариант <button ng-click="changeColor('dark')" class="btn btn-primary">Выбрать</button></li>
+                            <li>Третий вариант <button ng-click="changeColor('light-dark')" class="btn btn-primary">Выбрать</button></li>
+                        </ul>
                     </div>
                 </div>
             </div>

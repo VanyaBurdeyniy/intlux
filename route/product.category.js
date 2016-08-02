@@ -4,5 +4,6 @@ module.exports = function(app) {
     // Setting up the local authentication
     app.route('/products/category/add').post(productsCategory.add);
     app.route('/products/category/edit').put(productsCategory.edit);
-    app.route('/products/category').get(productsCategory.get);
+    app.route('/products/category/:id').get(productsCategory.get);
+    app.route('/products/category/one/:id').get(productsCategory.getOne);
 };

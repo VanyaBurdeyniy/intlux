@@ -4,7 +4,13 @@ var mongoose = require('mongoose'),
 
 var NewsSchema = new Schema({
     content: String,
-    img: String,
+    description: String,
+    title: String,
+    img: {
+        name:String,
+        path:String,
+        base64:String
+    },
     created: {
         type: Date,
         default: Date.now

@@ -18,13 +18,16 @@ module.exports = function() {
     require('../models/product.model');
     require('../models/product.category.model');
     require('../models/service.model');
+    require('../models/service.category.model');
+    require('../models/service.subcategory.model');
+    require('../models/design.model');
 
 	// Enable logger (morgan)
     app.use(morgan('dev'));
 
     // Use Express middlewares
-    app.use(bodyParser.urlencoded());
-    app.use(bodyParser.json());
+    app.use(bodyParser.json({limit: '50mb'}));
+    app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
     app.use(methodOverride());
     app.use(cookieParser());
     app.use(session({
@@ -44,7 +47,10 @@ module.exports = function() {
     require('../route/product')(app);
     require('../route/product.category')(app);
     require('../route/service')(app);
+    require('../route/service.category')(app);
+    require('../route/service.subcategory')(app);
     require('../route/mail')(app);
+    require('../route/design')(app);
 
 	// Setting the app router and static folder
 	//app.use(express.static('../public'));

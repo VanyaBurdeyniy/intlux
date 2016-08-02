@@ -6,6 +6,7 @@ var ServiceCategorySchema = new Schema({
     title:String,
     decriptionBig: String,
     serviceId:String,
+    hasSubCategory: Boolean,
     img: {
         name:String,
         path:String,

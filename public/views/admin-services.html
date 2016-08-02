@@ -16,51 +16,24 @@
 
                 <div class="col-lg-10">
 
-
-                    <!--<div class="col-sm-12" ng-repeat="product in productList">-->
-                    <!--<div class="col-sm-2">-->
-                    <!--<img ng-src="{{product.img.path}}" alt="">-->
-                    <!--</div>-->
-                    <!--<div class="col-sm-8">-->
-                    <!--<h2>{{product.title}}</h2>-->
-                    <!--&lt;!&ndash;<p>{{product.decriptionBig}}</p>&ndash;&gt;-->
-                    <!--<p ng-bind-html="toTrustedHTML(product.decriptionBig)"></p>-->
-                    <!--</div>-->
-                    <!--</div>-->
-
-
-
-
-                    <div class="container">
-                        <div class="col-md-4">
-                            <form action="/upload-target" class="dropzone" id="drop">
-                                <div class="dz-message needsclick">
-                                    <i class="fa fa-picture-o fa-5x" aria-hidden="true"></i>
-                                </div>
-                            </form>
-                        </div>
-
+                    <div style="margin-bottom:20px;" class="col-sm-12 admin-products-wrapper">
+                        <ul class="admin-products-list">
+                            <li ng-repeat="product in productList">
+                                <span ng-click="editProduct(product)">{{product.title}}</span>
+                                <ul ng-if="product.hasCategory">
+                                    <li ng-repeat="subProduct in product.subProducts">
+                                        <span ng-click="editProduct(subProduct)">{{subProduct.title}}</span>
+                                        <ul ng-if="subProduct.hasSubCategory">
+                                            <li ng-repeat="subSericeSub in subProduct.subServicesSub">
+                                                <span ng-click="editProduct(subSericeSub)">{{subSericeSub.title}}</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <hr class="hr">
+                            </li>
+                        </ul>
                     </div>
-
-                    <form action="/upload-target" id="dropzone-div"></form>
-
-                    <!--<div class="form-group">-->
-                        <!--<label for="parent">Категория:</label>-->
-                        <!--<select type="text" ng-model="productCategoryId" id="parent">-->
-                            <!--<option ng-repeat="product in productList" value="{{product._id}}">{{product.title}}</option>-->
-                        <!--</select>-->
-                    <!--</div>-->
-                    <div class="form-group">
-                        <label for="title">Название:</label>
-                        <input type="text" ng-model="newProduct.title" id="title" />
-                    </div>
-                    <div class="form-group">
-                        <label for="bigDescription">Описание:</label>
-                        <textarea ui-tinymce="tinymceOptions" id="bigDescription"></textarea>
-                    </div>
-
-
-                    <button class="btn btn-default click" ng-click="addProduct(newProduct);">save</button>
 
                     <br>
                     <br>
