@@ -1837,6 +1837,21 @@ p.change-lang a:focus {
     border-color:#afe37a;
     cursor: pointer;
 }
+.dark #products-container .container, .dark #products-categories-container .container,
+.dark #products-categories-container .container {
+    background-color: rgba(0, 0, 0, 0.45) !important;
+    border-top: 4px solid #8bb95f !important;
+}
+.dark #products-categories-container .container img {
+    border: 2px solid white;
+    margin-bottom: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.21);
+}
+.dark .arrow-go-back {
+    color: #a280de !important;
+    margin-left: 25px;
+    margin-top: 10px;
+}
 .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
     font-family: 'Didact Gothic', sans-serif;
 }
