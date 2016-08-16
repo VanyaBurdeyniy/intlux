@@ -2117,3 +2117,11 @@ p.change-lang a:focus {
 .light-green #services-container .product-block {
     border-top: 2px solid #9dc376;
 }
+
+.skype-name {
+    margin: 0;
+    display: inline-block;
+    float: right;
+    margin-right: 60px;
+    margin-top: 10px;
+}
