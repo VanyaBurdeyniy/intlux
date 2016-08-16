@@ -455,6 +455,7 @@ h1, h2, h3, h4, h5, h6, label {
 .btn-2 {
     color: #843c67;
     cursor: pointer;
+    text-transform: uppercase !important;
 }
 .default .btn-2:before, .light-green .btn-2:before {
     content: '';
@@ -1831,6 +1832,7 @@ p.change-lang a:focus {
     -moz-transition: all 0.3s ease-out 0.1s;
     -o-transition: all 0.3s ease-out 0.1s;
     transition: all 0.3s ease-out 0.1s;
+    /*text-transform: capitalize !important;*/
 }
 .dark .navbar-default .navbar-nav>li>a:hover {
     color: #afe37a !important;

@@ -1,5 +1,5 @@
-artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootScope', '$stateParams',
-    function ($scope, $location, $http, $rootScope, $stateParams) {
+artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootScope', '$stateParams', '$translate',
+    function ($scope, $location, $http, $rootScope, $stateParams, $translate) {
 
         $scope.productCategories = function (product) {
             if (product.hasCategory) {
@@ -7,6 +7,11 @@ artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootS
             } else {
                 $location.path('/product/category/' + product._id);
             }
+        };
+
+        $scope.changeLanguage = function (key) {
+            $translate.use(key);
+            localStorage.setItem('lang', key);
         };
 
         $http.get('/products').then(function (data) {

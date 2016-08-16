@@ -19,55 +19,55 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <p class="change-lang chang-lang-desktop">
                 <span>
-                    <a>ru</a>
-                </span>
-                <span>
-                    <a>en</a>
-                </span>
-                <span>
-                    <a>kz</a>
-                </span>
+                            <a ng-click="changeLanguage('ru');">ru</a>
+                        </span>
+                        <span>
+                            <a ng-click="changeLanguage('en');">en</a>
+                        </span>
+                        <span>
+                            <a ng-click="changeLanguage('kz');">kz</a>
+                        </span>
             </p>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="#" data-dropdown-item="company-dropdown" class="dropdown-hover">Компания <span style="line-height: 1.5;margin-left: 10px;" class="glyphicon glyphicon-chevron-down pull-right"></span></a>
+                    <a href="#" data-dropdown-item="company-dropdown" class="dropdown-hover" translate="COMPANY">&nbsp;<span style="line-height: 1.5;margin-left: 10px;" class="glyphicon glyphicon-chevron-down pull-right"></span></a>
 
                     <ul class="dropdown-menu company-dropdown dropdown-menu-hover row">
-                        <li><a class="link-nav" ng-click="goToBlock($event.target)" data-scroll-item="#about_us">О нас</a></li>
-                        <li><a class="link-nav" data-scroll-item="#our_missions" ng-click="goToBlock($event.target)">Цели и миссия</a></li>
+                        <li><a class="link-nav" ng-click="goToBlock($event.target)" data-scroll-item="#about_us" translate="ABOUT_US"></a></li>
+                        <li><a class="link-nav" data-scroll-item="#our_missions" ng-click="goToBlock($event.target)" translate="MISSIONS"></a></li>
                     </ul>
                 </li>
                 <li>
-                    <a class="link-nav" data-scroll-item="#news-container" ng-click="goToBlock($event.target)">Новости</a>
+                    <a class="link-nav" data-scroll-item="#news-container" ng-click="goToBlock($event.target)" translate="NEWS"></a>
                 </li>
                 <li>
                     <!--<a class="link-nav" href="#products-container">Сервисы и продукты</a>-->
 
                     <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Сервисы и продукты <span style="line-height: 1.5;margin-left: 10px;" class="glyphicon glyphicon-chevron-down pull-right"></span></a>-->
-                    <a style="cursor:pointer;" class="dropdown-hover" data-dropdown-item="products-services-dropdown">Оборудование и Сервис <span style="line-height: 1.5;margin-left: 10px;" class="glyphicon glyphicon-chevron-down pull-right"></span></a>
+                    <a style="cursor:pointer;" class="dropdown-hover" data-dropdown-item="products-services-dropdown" translate="PRODUCTS_AND_SERVICES"> <span style="line-height: 1.5;margin-left: 10px;" class="glyphicon glyphicon-chevron-down pull-right"></span></a>
 
                     <ul class="dropdown-menu dropdown-menu-hover products-services-dropdown row">
-                        <li><a class="link-nav" data-scroll-item="#products-container" ng-click="goToBlock($event.target)">Оборудование</a></li>
-                        <li><a class="link-nav" data-scroll-item="#services-container" ng-click="goToBlock($event.target)">Сервис</a></li>
+                        <li><a class="link-nav" data-scroll-item="#products-container" ng-click="goToBlock($event.target)" translate="PRODUCT"></a></li>
+                        <li><a class="link-nav" data-scroll-item="#services-container" ng-click="goToBlock($event.target)" translate="SERVICES"></a></li>
                     </ul>
                 </li>
 
                 <li>
-                    <a class="link-nav" data-scroll-item="#contacts" ng-click="goToBlock($event.target)">Контакты</a>
+                    <a class="link-nav" data-scroll-item="#contacts" ng-click="goToBlock($event.target)" translate="CONTACTS">Контакты</a>
                 </li>
                 <li>
-                    <a class="link-nav" ng-href="/#/map">Сферы влияния</a>
+                    <a class="link-nav" ng-href="/#/map" translate="SQUARE_POWER"></a>
                 </li>
                 <li>
                     <p class="change-lang chang-lang-mobile">
                         <span>
-                            <a>ru</a>
+                            <a ng-click="changeLanguage('ru');">ru</a>
                         </span>
                         <span>
-                            <a>en</a>
+                            <a ng-click="changeLanguage('en');">en</a>
                         </span>
                         <span>
-                            <a>kz</a>
+                            <a ng-click="changeLanguage('kz');">kz</a>
                         </span>
                     </p>
                 </li>

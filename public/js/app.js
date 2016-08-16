@@ -1,10 +1,56 @@
 var artVikonce = angular.module('artVikonce', [
     'ui.router',
-    'flow'
+    'flow',
+    'pascalprecht.translate'
 ]);
 
-artVikonce.config(function($stateProvider, $urlRouterProvider, $locationProvider)
+artVikonce.config(function($stateProvider, $urlRouterProvider, $locationProvider, $translateProvider)
 {
+
+    $translateProvider.translations('en', {
+        COMPANY: 'Company',
+        NEWS: 'News',
+        PRODUCTS_AND_SERVICES: 'Products and Services',
+        CONTACTS: 'Contacts',
+        SQUARE_POWER: 'Sphere of Influence',
+        ABOUT_US: 'About Us',
+        MISSIONS: 'Goals and Mission',
+        PRODUCT: 'Products',
+        SERVICES: 'Service',
+        SLIDER_DESCRIPTION: 'We provide our experience and ' +
+        'capabilities in the supply to resolve any difficulties ' +
+        'and unusual situations, rather than iron and Technology'
+    });
+    $translateProvider.translations('ru', {
+        COMPANY: 'Компания',
+        NEWS: 'Новости',
+        PRODUCTS_AND_SERVICES: 'Оборудование и Сервис',
+        CONTACTS: 'Контакты',
+        SQUARE_POWER: 'Сферы Влияния',
+        ABOUT_US: 'О нас',
+        MISSIONS: 'Цели и Миссия',
+        PRODUCT: 'Оборудование',
+        SERVICES: 'Сервис',
+        SLIDER_DESCRIPTION: 'Мы предлагаем наш опыт и возможности в' +
+        ' поставках с решением любых трудностей и нестандартных ситуаций, а не железо и технологии'
+    });
+    $translateProvider.translations('kz', {
+        COMPANY: 'Компания',
+        NEWS: 'Жаңалықтар',
+        PRODUCTS_AND_SERVICES: 'Жабдықтар мен қызметтер',
+        CONTACTS: 'Байланыстар',
+        SQUARE_POWER: 'әсер ету саласы',
+        ABOUT_US: 'Біз туралы',
+        MISSIONS: 'Мақсаттары мен Миссиясы',
+        PRODUCT: 'Жабдық',
+        SERVICES: 'қызмет көрсету',
+        SLIDER_DESCRIPTION: 'Біз тәжірибе мен мүмкіндіктерін жеткізу ' +
+        'кез-келген қиындықтарды және ерекше жағдайларды шешу үшін емес, темір мен технологиясы ұсынамыз'
+    });
+    var lang;
+    if (localStorage.getItem('lang')) lang = localStorage.getItem('lang');
+    else lang = 'ru';
+    $translateProvider.preferredLanguage(lang);
 
     $('.wrapper-loader').hide();
     $stateProvider
