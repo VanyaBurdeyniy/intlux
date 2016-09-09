@@ -861,6 +861,7 @@ GMaps.prototype.addMarker = function(options) {
   else {
     if ((options.hasOwnProperty('lat') && options.hasOwnProperty('lng')) || options.position) {
       marker = this.createMarker(options);
+      console.log(marker);
     }
     else {
       throw 'No latitude or longitude defined.';

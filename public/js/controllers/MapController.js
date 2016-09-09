@@ -148,16 +148,20 @@ artVikonce.controller('MapController', ['$scope', function($scope) {
 
 
 
-    map = new GMaps({
+    var map = new GMaps({
         el: '#map',
         lat: -12.043333,
         lng: -77.028333
     });
+
+    console.log(map);
+
     map.addMarker({
         lat: -12.043333,
         lng: -77.03,
         icon: "../../img/rsz_1marker.png",
         title: 'Lima',
+        id: 'marker',
         details: {
             database_id: 42,
             author: 'HPNeo'

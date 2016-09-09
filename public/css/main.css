@@ -8,7 +8,8 @@
 
 html, body {
     /*font-family: 'Open Sans', sans-serif !important;*/
-    font-family: 'PT Sans', sans-serif;
+    /*font-family: 'PT Sans', sans-serif;*/
+    font-family: 'Roboto', sans-serif;
 
 
     font-weight: 100;
@@ -256,6 +257,20 @@ h1, h2, h3, h4, h5, h6, label {
 #map-container {
     margin-top:100px;
 }
+#map-container .contact_us {
+    margin-bottom: 30px;
+    padding: 15px 35px;
+    padding-right: 100px;
+    background-color: rgba(0, 0, 0, 0.58);
+}
+    #map-container .contact_us h1 {
+        font-size: 45px;
+        color: #a8c789;
+    }
+    #map-container .contact_us p {
+        font-size: 20px;
+        line-height: 1.1;
+    }
 
 /*
 * Slider
@@ -1431,11 +1446,11 @@ p.change-lang a:focus {
 }
 
 #news-container a {
-    color: #694e99;
+    color: rgba(105, 78, 153, 0.51);
     font-weight: 600;
 }
 #news-container a:hover {
-    color: rgba(105, 78, 153, 0.51);
+    color: #694e99;
     font-weight: 600;
     text-decoration: none;
     cursor: pointer;
@@ -1804,11 +1819,12 @@ p.change-lang a:focus {
     color:white !important;
 }
 .dark .navbar-default{
-    background-color: rgba(0, 0, 0, 0.71) !important;
+    /*background-color: rgba(0, 0, 0, 0.71) !important;*/
+    background-color: rgba(0, 0, 0, 0.3) !important;
     color: white;
 }
 .dark .navbar-default .navbar-collapse{
-    margin-right: 20px;
+    margin-right: 65px;
 }
 .dark hr {
     margin-bottom:0;
@@ -1863,8 +1879,7 @@ p.change-lang a:focus {
 .dark .navbar-nav>li>.dropdown-menu a {
     color: white !important;
     font-family: 'Roboto', sans-serif;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
+    border: 4px solid transparent;
     -webkit-transition: all 0.3s ease-out 0.1s;
     -moz-transition: all 0.3s ease-out 0.1s;
     -o-transition: all 0.3s ease-out 0.1s;
