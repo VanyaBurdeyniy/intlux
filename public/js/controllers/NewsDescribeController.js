@@ -1,5 +1,5 @@
-artVikonce.controller('NewsDescribeController', ['$scope', '$stateParams', '$http', '$sce',
-    function($scope, $stateParams, $http, $sce) {
+artVikonce.controller('NewsDescribeController', ['$scope', '$stateParams', '$http', '$sce', '$location',
+    function($scope, $stateParams, $http, $sce, $location) {
 
     $http.get('/news').then(function(data) {
 
@@ -7,6 +7,13 @@ artVikonce.controller('NewsDescribeController', ['$scope', '$stateParams', '$htt
             return news._id == $stateParams.id;
         });
     });
+
+    $scope.goToBlock = function () {
+        var target;
+        target = '#news-container';
+        localStorage.setItem('hash', target);
+        $location.path('/');
+    };
 
     $scope.toTrustedHTML = function (html) {
         return $sce.trustAsHtml(html);

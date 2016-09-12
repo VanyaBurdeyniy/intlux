@@ -14,10 +14,10 @@
             <br>
 
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" ng-repeat="subProduct in products">
-                <div class="col-sm-12">
-                    <h4 class="text-center h6-min-height">{{subProduct.title}}</h4>
+                <div class="col-sm-12 product-block">
+                    <h4 ng-click="productCategories(subProduct);" class="text-center">{{subProduct.title}}</h4>
+                    <img ng-click="productCategories(subProduct);" ng-src="{{subProduct.img.path}}" alt="" class="img-responsive">
                 </div>
-                <img ng-click="productCategories(subProduct);" ng-src="{{subProduct.img.path}}" alt="" class="img-responsive">
                 <!--<p class="text-center">{{subProduct.descriptionSmall}}</p>-->
             </div>
         </div>

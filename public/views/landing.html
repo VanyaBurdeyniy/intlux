@@ -157,8 +157,8 @@
         <div class="row">
 
             <div ng-repeat="new in news" class="col-sm-12 margin-bottom-10">
-                <div class="col-sm-2">
-                    <img ng-src="{{new.img.path}}" class="img-responsive" alt="">
+                <div class="col-sm-2 news-block">
+                    <img ng-click="goToNewsDescribe(new._id);" ng-src="{{new.img.path}}" class="img-responsive" alt="">
                 </div>
                 <div class="col-sm-7">
                     <h4><a ng-click="goToNewsDescribe(new._id);">{{new.title}}</a></h4>
@@ -169,48 +169,6 @@
                     <span class="text-center">{{new.created}}</span>
                 </div>
             </div>
-
-            <!--<div class="col-sm-12 margin-bottom-10">-->
-                <!--<div class="col-sm-2">-->
-                    <!--<img src="img/intro-bg.jpg" class="img-responsive" alt="">-->
-                <!--</div>-->
-                <!--<div class="col-sm-7">-->
-                    <!--<h4><a ng-click="goToNewsDescribe(4733);">Новость</a></h4>-->
-                    <!--<p>Краткое описание...</p>-->
-                <!--</div>-->
-                <!--<div class="col-sm-3">-->
-                    <!--<br>-->
-                    <!--<span class="text-center">07.07.2016</span>-->
-                <!--</div>-->
-            <!--</div>-->
-
-            <!--<div class="col-sm-12 margin-bottom-10">-->
-                <!--<div class="col-sm-2">-->
-                    <!--<img src="img/intro-bg.jpg" class="img-responsive" alt="">-->
-                <!--</div>-->
-                <!--<div class="col-sm-7">-->
-                    <!--<h4><a ng-click="goToNewsDescribe(4733);">Новость</a></h4>-->
-                    <!--<p>Краткое описание...</p>-->
-                <!--</div>-->
-                <!--<div class="col-sm-3">-->
-                    <!--<br>-->
-                    <!--<span class="text-center">07.07.2016</span>-->
-                <!--</div>-->
-            <!--</div>-->
-
-            <!--<div class="col-sm-12 margin-bottom-10">-->
-                <!--<div class="col-sm-2">-->
-                    <!--<img src="img/intro-bg.jpg" class="img-responsive" alt="">-->
-                <!--</div>-->
-                <!--<div class="col-sm-7">-->
-                    <!--<h4><a ng-click="goToNewsDescribe(4733);">Новость</a></h4>-->
-                    <!--<p>Краткое описание...</p>-->
-                <!--</div>-->
-                <!--<div class="col-sm-3">-->
-                    <!--<br>-->
-                    <!--<span class="text-center">07.07.2016</span>-->
-                <!--</div>-->
-            <!--</div>-->
         </div>
 
     </div>
@@ -228,8 +186,8 @@
 
         <div class="row product-list">
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" ng-repeat="product in products">
-                <div class="col-sm-12 product-block">
-                    <h6 class="text-center">{{product.title}}</h6>
+                <div class="col-sm-12 product-block min-height-222">
+                    <h6 ng-click="productCategories(product);" class="text-center">{{product.title}}</h6>
                     <div class="img-block">
                         <img ng-click="productCategories(product);" ng-src="{{product.img.path}}" alt="" class="img-responsive">
                     </div>
@@ -253,8 +211,8 @@
 
         <div class="row product-list">
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" ng-repeat="service in services">
-                <div class="col-sm-12 product-block">
-                    <h6 class="text-center">{{service.title}}</h6>
+                <div class="col-sm-12 product-block min-height-222">
+                    <h6 ng-click="serviceCategories(service);" class="text-center">{{service.title}}</h6>
                     <div class="img-block">
                         <img ng-click="serviceCategories(service);" ng-src="{{service.img.path}}" alt="" class="img-responsive">
                     </div>

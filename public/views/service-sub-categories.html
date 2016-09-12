@@ -14,10 +14,10 @@
             <br>
 
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" ng-repeat="service in services">
-                <div class="col-sm-12 no-padding">
-                    <h4 class="text-center h6-min-height">{{service.title}}</h4>
+                <div class="col-sm-12 product-block">
+                    <h4 ng-click="productCategories(service);" class="text-center">{{service.title}}</h4>
+                    <img ng-click="productCategories(service);" ng-src="{{service.img.path}}" alt="" class="img-responsive">
                 </div>
-                <img ng-click="productCategories(service);" ng-src="{{service.img.path}}" alt="" class="img-responsive">
             </div>
         </div>
     </div>
