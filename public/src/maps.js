@@ -365,6 +365,7 @@ var GMaps = (function(global) {
 
           html += '<li><a id="' + control + '_' + i + '" href="#">' + option.title + '</a></li>';
         }
+        console.log(html);
       }
 
       if (!getElementById('gmaps_context_menu')) return;
@@ -643,6 +644,7 @@ var GMaps = (function(global) {
 
 GMaps.prototype.createControl = function(options) {
   var control = document.createElement('div');
+  control.className = 'marker1';
 
   control.style.cursor = 'pointer';
 
@@ -849,6 +851,8 @@ GMaps.prototype.createMarker = function(options) {
     });
   }
 
+  console.log(marker);
+
   return marker;
 };
 
@@ -972,6 +976,7 @@ GMaps.prototype.drawOverlay = function(options) {
 
   overlay.onAdd = function() {
     var el = document.createElement('div');
+    el.className = 'marker2';
 
     el.style.borderStyle = "none";
     el.style.borderWidth = "0px";
@@ -1957,6 +1962,8 @@ GMaps.staticMapURL = function(options){
       }
       else if (data.icon) {
         marker.push('icon:' + encodeURI(data.icon));
+        console.log(marker);
+        console.log(data);
         delete data.icon;
       }
 
