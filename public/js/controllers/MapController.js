@@ -1,92 +1,4 @@
 artVikonce.controller('MapController', ['$scope', function($scope) {
-    //mapboxgl.accessToken = 'pk.eyJ1IjoidmFueWFidXJkIiwiYSI6ImNpcG11ODVtaDAwMDd1c21penpzeWJ0ZXYifQ.377v6sAYBbJeICHZ9WcoVA';
-    //var map = new mapboxgl.Map({
-    //    container: 'map',
-    //    style: 'mapbox://styles/mapbox/streets-v9',
-    //    center: [-96, 37.8],
-    //    zoom: 3
-    //});
-    //
-    ////var markerArr = [-77.03238901390978, 38.913188059745586];
-    //var markerArr = [139.6917100, 35.6895000];
-    //
-    //function changeMarker(first, second) {
-    //    markerArr = [first, second];
-    //    initMap();
-    //    map.on('reload', function() {
-    //        console.log('rerre');
-    //    });
-    //}
-    //
-    //$('.pseijpij').click(function() {
-    //    markerArr = [40.7142700, -74.0059700];
-    //    //markerArr = [-77.03238901390978, 38.913188059745586];
-    //
-    //    $('#map').html('');
-    //    map = new mapboxgl.Map({
-    //        container: 'map',
-    //        style: 'mapbox://styles/mapbox/streets-v9',
-    //        center: [-96, 37.8],
-    //        zoom: 3
-    //    });
-    //    initMap(markerArr);
-    //});
-    //
-    //function initMap() {
-    //    //if (markers) {
-    //    //    markerArr = markers;
-    //    //}
-    //    map.on('load', function () {
-    //        map.addSource("markers", {
-    //            "type": "geojson",
-    //            "data": {
-    //                "type": "FeatureCollection",
-    //                "features": [{
-    //                    "type": "Feature",
-    //                    "geometry": {
-    //                        "type": "Point",
-    //                        "coordinates": [-77.03238901390978, 38.913188059745586]
-    //                    },
-    //                    "properties": {
-    //                        "title": "Mapbox DC",
-    //                        "marker-symbol": "circle"
-    //                    }
-    //                },
-    //                    {
-    //                    "type": "Feature",
-    //                    "geometry": {
-    //                        "type": "Point",
-    //                        "coordinates": [-122.414, 37.776]
-    //                    },
-    //                    "properties": {
-    //                        "title": "Mapbox SF",
-    //                        "marker-symbol": "circle"
-    //                    }
-    //                }
-    //                ]
-    //            }
-    //        });
-    //
-    //        map.addLayer({
-    //            "id": "markers",
-    //            "type": "symbol",
-    //            "source": "markers",
-    //            "layout": {
-    //                "icon-image": "{marker-symbol}-15",
-    //                "text-field": "{title}",
-    //                "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
-    //                "text-offset": [0, 0.6],
-    //                "text-anchor": "top"
-    //            }
-    //        });
-    //    });
-    //}
-    //
-    //initMap();
-
-
-
-
 
     $scope.kz = [{
       lng:'52.2740100',
@@ -222,25 +134,49 @@ artVikonce.controller('MapController', ['$scope', function($scope) {
     }
 
 
-    $scope.changeMarkersForAll = function() {
-        console.log(map);
-        map.map.zoom = 6;
-        changeMarker($scope.allCoord);
+    $scope.changeMarkersForAll = function(target) {
+        if (target.checked) {
+            console.log(map);
+            map.map.zoom = 6;
+            changeMarker($scope.allCoord);
+        } else {
+            clearMarkers();
+            map.markers = [];
+        }
     };
 
-    $scope.changeMarkerKZ = function() {
-        changeMarker($scope.kz);
+    $scope.changeMarkerKZ = function(target) {
+        if (target.checked) {
+            changeMarker($scope.kz);
+        } else {
+            clearMarkers();
+            map.markers = [];
+        }
     };
-    $scope.changeMarkerUSA = function() {
-        changeMarker($scope.usa);
+    $scope.changeMarkerUSA = function(target) {
+        if (target.checked) {
+            changeMarker($scope.usa);
+        } else {
+            clearMarkers();
+            map.markers = [];
+        }
     };
-    $scope.changeMarkerUA = function() {
-        changeMarker($scope.ua);
+    $scope.changeMarkerUA = function(target) {
+        if (target.checked) {
+            changeMarker($scope.ua);
+        } else {
+            clearMarkers();
+            map.markers = [];
+        }
     };
-    $scope.changeMarkerRU = function() {
-        changeMarker($scope.ru);
+    $scope.changeMarkerRU = function(target) {
+        if (target.checked) {
+            changeMarker($scope.ru);
+        } else {
+            clearMarkers();
+            map.markers = [];
+        }
     };
-
 
     $(':checkbox').on('change',function(){
         var th = $(this), name = th.prop('name');
@@ -248,7 +184,5 @@ artVikonce.controller('MapController', ['$scope', function($scope) {
             $(':checkbox[name="'  + name + '"]').not($(this)).prop('checked',false);
         }
     });
-
-
 
 }]);
