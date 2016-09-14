@@ -105,6 +105,9 @@ artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootS
         };
 
         $http.get('/news').then(function(data) {
+            data.data = data.data.sort(function(a,b) {
+                return new Date(b.created).getTime() - new Date(a.created).getTime()
+            });
            $scope.news = data.data;
         });
 
