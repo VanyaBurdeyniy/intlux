@@ -2002,10 +2002,12 @@ p.change-lang a:focus {
     font-family: 'Roboto', sans-serif !important;
 }
 .dark .navbar-nav>li>.dropdown-menu {
-    background-color: rgba(0, 0, 0, 0.71) !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+    padding: 0;
 }
 .dark .navbar-nav>li>.dropdown-menu a {
     color: white !important;
+    background-color: rgba(0, 0, 0, 0.71) !important;
     font-family: 'Roboto', sans-serif;
     border: 4px solid transparent;
     -webkit-transition: all 0.3s ease-out 0.1s;
@@ -2014,8 +2016,8 @@ p.change-lang a:focus {
     transition: all 0.3s ease-out 0.1s;
 }
 .dark .navbar-nav>li>.dropdown-menu a:hover {
-    background-color: rgba(175, 227, 122, 0.82) !important;
-    color: #1f262b !important;
+    background-color: rgba(139, 185, 95, 0.6) !important;
+    color: #ffffff !important;
     -webkit-transition: all 0.3s ease-out 0.1s;
     -moz-transition: all 0.3s ease-out 0.1s;
     -o-transition: all 0.3s ease-out 0.1s;

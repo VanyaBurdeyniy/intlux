@@ -5,6 +5,7 @@ artVikonce.controller('AdminProductsEditController', ['$scope', '$rootScope', '$
         $rootScope.isProducts = true;
         $rootScope.isServices = false;
         $rootScope.isNews = false;
+        var myDropzone;
         var dropzone;
 
         $scope.productCategoryId = '';
@@ -61,27 +62,43 @@ artVikonce.controller('AdminProductsEditController', ['$scope', '$rootScope', '$
                 $scope.productList = $scope.productList[0];
                 if ($scope.productList) {
                     tinymce.activeEditor.setContent($scope.productList.decriptionBig);
+                    activateDropzone();
                 } else {
                     $http.get('/products/category/one/' + $stateParams.id).then(function (data) {
                         $scope.subProducts = data.data;
                         $scope.productList = $scope.subProducts[0];
                         if ($scope.productList) {
                             tinymce.activeEditor.setContent($scope.productList.decriptionBig);
+                            activateDropzone();
                         }
                     });
                 }
             }
 
-            var myDropzone = new Dropzone("form#drop", {
+        });
+
+        $('#drop').click(function(){
+            dropzone.processQueue();
+        });
+
+        function activateDropzone() {
+            myDropzone = new Dropzone("form#drop", {
                 uploadMultiple: false, thumbnailWidth: "700",
-                thumbnailHeight: "700"
+                thumbnailHeight: "700",
+                maxFiles:1
             });
             myDropzone.options.myAwesomeDropzone = {
                 maxFilesize: 2,
+                maxFiles:1,
                 uploadMultiple: false,
                 thumbnailWidth: "250",
                 thumbnailHeight: "250"
             };
+
+            myDropzone.on("maxfilesexceeded", function(file) {
+                myDropzone.removeAllFiles();
+                myDropzone.addFile(file);
+            });
             //var mockFile = { name: $scope.productList.img.name, size: 12345 };
             //myDropzone.options.addedfile.call(myDropzone, mockFile);
             //myDropzone.options.thumbnail.call(myDropzone, mockFile, $scope.productList.img.path);
@@ -94,7 +111,18 @@ artVikonce.controller('AdminProductsEditController', ['$scope', '$rootScope', '$
                     });
                 }
             };
-        });
+
+            var file = {
+                name: 'Picture',
+                size: 256,
+                status: dropzone.ADDED,
+                accepted: true
+            };
+            myDropzone.emit("addedfile", file);
+            myDropzone.emit("thumbnail", file, $scope.productList.img.path);
+            myDropzone.emit("complete", file);
+            myDropzone.files.push(file);
+        }
 
         $scope.edit = function (product) {
             product.img = {
