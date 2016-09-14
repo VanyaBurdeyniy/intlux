@@ -62,31 +62,33 @@ artVikonce.controller('MapController', ['$scope', function($scope) {
 
     var map = new GMaps({
         el: '#map',
-        lat: -12.043333,
-        lng: -77.028333
+        //lat: 0.043333,
+        lat: 0,
+        //lng: 0.028333
+        lng: 0
     });
 
     console.log(map);
 
-    map.addMarker({
-        lat: -12.043333,
-        lng: -77.03,
-        icon: "../../img/rsz_1marker.png",
-        id: 'marker',
-        animation: google.maps.Animation.DROP,
-        details: {
-            database_id: 42,
-            author: 'HPNeo'
-        },
-        click: function(e){
-            if(console.log)
-                console.log(e);
-        },
-        mouseover: function(e){
-            if(console.log)
-                console.log(e);
-        }
-    });
+    //map.addMarker({
+    //    lat: -12.043333,
+    //    lng: -77.03,
+    //    icon: "../../img/rsz_1marker.png",
+    //    id: 'marker',
+    //    animation: google.maps.Animation.DROP,
+    //    details: {
+    //        database_id: 42,
+    //        author: 'HPNeo'
+    //    },
+    //    click: function(e){
+    //        if(console.log)
+    //            console.log(e);
+    //    },
+    //    mouseover: function(e){
+    //        if(console.log)
+    //            console.log(e);
+    //    }
+    //});
     map.zoomOut(11);
 
     function setMapOnAll(data) {

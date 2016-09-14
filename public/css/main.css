@@ -1654,6 +1654,11 @@ p.change-lang a:focus {
 
 
 
+@media(max-width:1280px){
+    html, body {
+        height:auto !important;
+    }
+}
 @media(max-width:1020px){
     html, body {
         height:auto !important;
