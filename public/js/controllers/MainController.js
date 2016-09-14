@@ -108,6 +108,10 @@ artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootS
             data.data = data.data.sort(function(a,b) {
                 return new Date(b.created).getTime() - new Date(a.created).getTime()
             });
+            data.data.forEach(function(news) {
+                var date = new Date(news.created);
+               news.created = date.toUTCString();
+            });
            $scope.news = data.data;
         });
 
