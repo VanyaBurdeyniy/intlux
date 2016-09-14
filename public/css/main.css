@@ -755,6 +755,15 @@ html span {
     padding-top:100px;
 }
 
+#news-describe-container .col-lg-7 p a {
+    color: #bb9af7;
+    font-weight:600;
+}
+#news-describe-container .col-lg-7 p a:hover {
+    color: #9075c3;
+    text-decoration: none;
+}
+
 .no-padding {
     padding:0;
 }
