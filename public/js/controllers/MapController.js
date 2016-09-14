@@ -74,6 +74,7 @@ artVikonce.controller('MapController', ['$scope', function($scope) {
         icon: "../../img/rsz_1marker.png",
         title: 'Lima',
         id: 'marker',
+        animation: google.maps.Animation.DROP,
         details: {
             database_id: 42,
             author: 'HPNeo'
@@ -115,6 +116,7 @@ artVikonce.controller('MapController', ['$scope', function($scope) {
                 lng: child.lt,
                 icon: "../../img/rsz_1marker.png",
                 title: 'Lima',
+                animation: google.maps.Animation.DROP,
                 details: {
                     database_id: 42,
                     author: 'HPNeo'
