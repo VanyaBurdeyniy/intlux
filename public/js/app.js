@@ -177,6 +177,13 @@ artVikonce.config(function($stateProvider, $urlRouterProvider, $locationProvider
             controller: 'AdminServicesEditController'
         })
 
+        .state('adminNewsAllController', {
+            name: 'AdminNewsAllController',
+            url: '/admin/panel/news/all',
+            templateUrl: '../views/admin-news-all.html',
+            controller: 'AdminNewsAllController'
+        })
+
     //$locationProvider.html5Mode(true);
     $urlRouterProvider.otherwise('/');
 });

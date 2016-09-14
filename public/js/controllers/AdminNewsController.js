@@ -1,4 +1,4 @@
-artVikonce.controller('AdminNewsController', ['$scope', '$rootScope', '$http', function($scope, $rootScope, $http) {
+artVikonce.controller('AdminNewsController', ['$scope', '$rootScope', '$http', '$location', function($scope, $rootScope, $http, $location) {
 
     $rootScope.isAdmin = true;
     $rootScope.isServices = false;
@@ -61,6 +61,10 @@ artVikonce.controller('AdminNewsController', ['$scope', '$rootScope', '$http', f
     };
 
 
+
+    $scope.goToAllNews = function() {
+        $location.path('admin/panel/news/all');
+    }
 
 
 }]);

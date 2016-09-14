@@ -1,0 +1,39 @@
+<div id="wrapper">
+    <div class="overlay"></div>
+
+    <nav ng-include src="'views/partials/sidebar.html'" class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation"></nav>
+
+    <div id="page-content-wrapper">
+        <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+        </button>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-2"></div>
+
+                <div class="col-lg-10">
+
+                    <div style="margin-bottom:20px;" class="col-sm-12 admin-products-wrapper">
+                        <ul class="admin-products-list">
+                            <li ng-repeat="new in news">
+                                <span>{{new.title}}</span>
+                                <button class="btn btn-danger" style="float: right;" ng-click="deleteNew(new);">Удалить</button>
+                                <hr class="hr">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -83,6 +83,8 @@ exports.edit = function(req, res, next) {
     });
 };
 
+
+
 //exports.getUsers = function(req, res, next) {
 //    User.find({
 //        type:'Developer'
@@ -132,5 +134,17 @@ exports.get = function(req, res, next) {
         res.jsonp(news);
 
         return news;
+    });
+};
+
+
+exports.remove = function(req, res, next) {
+    News.remove({ _id: req.body._id }, function(err) {
+        if (!err) {
+            res.status(200).json('ok');
+        }
+        else {
+            res.status(500).json('not ok');
+        }
     });
 };

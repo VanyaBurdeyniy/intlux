@@ -45,6 +45,7 @@ artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootS
             });
         };
 
+        //$scope.dateRange = Date.now();
 
         $scope.goToNewsDescribe = function (id) {
             $location.path('/news/' + id);
