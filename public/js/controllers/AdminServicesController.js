@@ -63,6 +63,8 @@ artVikonce.controller('AdminServicesController', ['$scope', '$rootScope', '$http
             location.reload();
         };
 
-
+        $scope.goToAddService = function() {
+            $location.path('/admin/panel/service/add');
+        }
 
     }]);

@@ -655,6 +655,13 @@ html span {
 
 
 
+.shadow-bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.28);
+    z-index: 1;
+}
 
 
 
@@ -689,7 +696,7 @@ html span {
 
 .dark nav.resized {
     min-height: 50px !important;
-    background-color: rgba(61,78,92,0.97) !important;
+    background-color: rgba(25, 25, 25, 0.91) !important;
     -webkit-transition: all 0.3s ease-out 0.1s;
     -moz-transition: all 0.3s ease-out 0.1s;
     -o-transition: all 0.3s ease-out 0.1s;
@@ -2336,4 +2343,64 @@ p.change-lang a:focus {
     color: #d7f1bf;
     background-color: white;
     border-color: white;
+}
+
+
+.navbar-right {
+    margin: auto !important;
+    display: inline-block !important;
+    float: none !important;
+}
+
+@media(max-width: 500px) {
+    .intro-header-title {
+        top: 160px !important;
+        width: 90%;
+        margin:auto;
+    }
+    .slider-title {
+        width: 100% !important;
+    }
+    .light-overlay {
+        height: 100vh !important;
+    }
+    .form-group.margin-left {
+        margin-left: 0 !important;
+    }
+    .form-group.margin-right {
+        margin-right: 0 !important;
+    }
+    .form-group input {
+        width: 100% !important;
+    }
+}
+
+@media(max-width: 800px) {
+    #contacts form textarea {
+        width: 100% !important;
+        border-radius: 0;
+        margin-top: 20px;
+        margin-bottom:20px;
+    }
+    #contacts .row:first-child {
+        margin-bottom: 40px;
+    }
+}
+
+@media(max-width: 1024px) {
+    .form-group.margin-left {
+        margin-left: 0 !important;
+    }
+    .form-group.margin-right {
+        margin-right: 0 !important;
+    }
+    .form-group input {
+        width: 100% !important;
+    }
+    #contacts form textarea {
+        width: 400px;
+        border-radius: 0;
+        margin-top: 20px;
+        margin-bottom:20px;
+    }
 }

@@ -6,6 +6,7 @@ artVikonce.controller('AdminServicesEditController', ['$scope', '$rootScope', '$
         $rootScope.isServices = false;
         $rootScope.isNews = false;
         var dropzone;
+        var serviceFlag;
 
         $scope.productCategoryId = '';
         $scope.productCategories = [];
@@ -51,6 +52,19 @@ artVikonce.controller('AdminServicesEditController', ['$scope', '$rootScope', '$
             });
         };
 
+        $scope.deleteService = function(service) {
+            var url;
+            if (serviceFlag === 'service') url = '/service/remove';
+            else if(serviceFlag === 'serviceCategory') url = '/service/category/remove';
+            else if (serviceFlag === 'serviceSubCategory') url = '/service/category/sub/remove';
+            $http.post(url, service)
+                .then(function(data) {
+                    console.log(data);
+                })
+                .catch(function(err) {
+                   console.log(err);
+                });
+        };
 
         $http.get('/services').then(function (data) {
             $scope.productList = data.data;
@@ -61,6 +75,8 @@ artVikonce.controller('AdminServicesEditController', ['$scope', '$rootScope', '$
                 if ($scope.productList.length > 0) {
                     $scope.productList = $scope.productList[0];
                     tinymce.activeEditor.setContent($scope.productList.decriptionBig);
+                    activateDropzone();
+                    serviceFlag = 'services';
                 } else {
                     $http.get('/service/category/').then(function (data) {
                         $scope.subProducts = data.data;
@@ -70,6 +86,8 @@ artVikonce.controller('AdminServicesEditController', ['$scope', '$rootScope', '$
                         if ($scope.productList.length > 0) {
                             $scope.productList = $scope.productList[0];
                             tinymce.activeEditor.setContent($scope.productList.decriptionBig);
+                            activateDropzone();
+                            serviceFlag = 'serviceCategory';
                         } else {
                             $http.get('/service/category/sub').then(function (data) {
                                 $scope.subProducts = data.data;
@@ -79,23 +97,42 @@ artVikonce.controller('AdminServicesEditController', ['$scope', '$rootScope', '$
                                 if ($scope.productList.length > 0) {
                                     $scope.productList = $scope.productList[0];
                                     tinymce.activeEditor.setContent($scope.productList.decriptionBig);
+                                    activateDropzone();
+                                    serviceFlag = 'serviceSubCategory';
                                 }
                             });
                         }
                     });
                 }
             }
+        });
 
-            var myDropzone = new Dropzone("form#drop", {
+
+        $('#drop').click(function(){
+            dropzone.processQueue();
+        });
+
+        function activateDropzone() {
+            myDropzone = new Dropzone("form#drop", {
                 uploadMultiple: false, thumbnailWidth: "700",
-                thumbnailHeight: "700"
+                thumbnailHeight: "700",
+                maxFiles:1
             });
             myDropzone.options.myAwesomeDropzone = {
                 maxFilesize: 2,
+                maxFiles:1,
                 uploadMultiple: false,
                 thumbnailWidth: "250",
                 thumbnailHeight: "250"
             };
+
+            myDropzone.on("maxfilesexceeded", function(file) {
+                myDropzone.removeAllFiles();
+                myDropzone.addFile(file);
+            });
+            //var mockFile = { name: $scope.productList.img.name, size: 12345 };
+            //myDropzone.options.addedfile.call(myDropzone, mockFile);
+            //myDropzone.options.thumbnail.call(myDropzone, mockFile, $scope.productList.img.path);
             dropzone = myDropzone;
 
             dropzone.options.myAwesomeDropzone = {
@@ -105,7 +142,18 @@ artVikonce.controller('AdminServicesEditController', ['$scope', '$rootScope', '$
                     });
                 }
             };
-        });
+
+            var file = {
+                name: 'Picture',
+                size: 256,
+                status: dropzone.ADDED,
+                accepted: true
+            };
+            myDropzone.emit("addedfile", file);
+            myDropzone.emit("thumbnail", file, $scope.productList.img.path);
+            myDropzone.emit("complete", file);
+            myDropzone.files.push(file);
+        }
 
         $scope.edit = function (product) {
             product.img = {

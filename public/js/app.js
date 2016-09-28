@@ -184,6 +184,20 @@ artVikonce.config(function($stateProvider, $urlRouterProvider, $locationProvider
             controller: 'AdminNewsAllController'
         })
 
+        .state('AdminProductNewController', {
+            name: 'AdminNewsAllController',
+            url: '/admin/panel/product/new',
+            templateUrl: '../views/admin-product-new.html',
+            controller: 'AdminProductNewController'
+        })
+
+        .state('AdminServiceNewController', {
+            name: 'AdminServiceNewController',
+            url: '/admin/panel/service/add',
+            templateUrl: '../views/admin-service-new.html',
+            controller: 'AdminServiceNewController'
+        })
+
     //$locationProvider.html5Mode(true);
     $urlRouterProvider.otherwise('/');
 });

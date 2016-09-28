@@ -15,14 +15,23 @@
                 <div class="col-lg-2"></div>
 
                 <div class="col-lg-10">
+                    <div class="admin-products-wrapper">
 
-                    <div style="margin-bottom:20px;" class="col-sm-12 admin-products-wrapper">
+                        <div class="col-xs-12 text-right">
+                            <button class="btn btn-success" ng-click="goToAllService();">Все сервисы</button>
+                        </div>
 
-                        <button style="float:right;" ng-click="deleteService(productList);" class="btn btn-danger">Удалить</button>
+                        <div class="form-group">
+                            <label>Раздел:</label>
+                            <select name="" id="" ng-model="chosen">
+                                <option value="" ng-repeat="product in productList">{{product.title}}</option>
+                            </select>
+                        </div>
+
 
                         <div class="form-group">
                             <label for="title">Название:</label>
-                            <input style="width:80%;" type="text" ng-model="productList.title" ng-bind="productList.title" id="title"/>
+                            <input style="width:500px;" type="text" id="title" ng-model="service.title" />
                         </div>
 
                         <div class="container">
@@ -34,17 +43,14 @@
                                 </form>
                             </div>
                         </div>
-                        <form action="/upload-target" id="dropzone-div"></form>
 
-                        <div class="form-group">
-                            <label for="bigDescription">Описание:</label>
-                            <textarea ui-tinymce="tinymceOptions" id="bigDescription" ng-model="productList.descriptionBig"></textarea>
-                        </div>
-
-
-                        <button class="btn btn-default click" ng-click="edit(productList);">Сохранить</button>
-
+                        <!--<form method="post" ng-controller="TinyMceController">-->
+                        <textarea ui-tinymce="tinymceOptions" ng-model="service.tinymceModel"></textarea>
+                        <!--</form>-->
+                        <br>
+                        <button class="click btn btn-primary save" ng-click="save(service, chosen);">Добавить</button>
                     </div>
+
 
                     <br>
                     <br>
@@ -57,3 +63,4 @@
         </div>
     </div>
 </div>
+

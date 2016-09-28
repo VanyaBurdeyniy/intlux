@@ -58,6 +58,10 @@ artVikonce.controller('AdminProductsController', ['$scope', '$rootScope', '$http
         };
 
 
+        $scope.goToNewProduct = function() {
+          $location.path('/admin/panel/product/new');
+        };
+
         $http.get('/products').then(function (data) {
             data.data = data.data.filter(function (product) {
                 return $.parseHTML(product.decriptionBig);

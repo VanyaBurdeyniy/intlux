@@ -96,3 +96,14 @@ exports.get = function(req, res, next) {
         return news;
     });
 };
+
+exports.remove = function(req, res, next) {
+    ServiceCategory.remove({ _id: req.body._id }, function(err) {
+        if (!err) {
+            res.status(200).json('ok');
+        }
+        else {
+            res.status(500).json('not ok');
+        }
+    });
+};

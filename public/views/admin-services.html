@@ -17,6 +17,11 @@
                 <div class="col-lg-10">
 
                     <div style="margin-bottom:20px;" class="col-sm-12 admin-products-wrapper">
+
+                        <div class="col-sm-12 text-right">
+                            <button class="btn btn-success" ng-click="goToAddService()">Добавить</button>
+                        </div>
+
                         <ul class="admin-products-list">
                             <li ng-repeat="product in productList">
                                 <span ng-click="editProduct(product)">{{product.title}}</span>
