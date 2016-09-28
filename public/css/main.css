@@ -2350,6 +2350,7 @@ p.change-lang a:focus {
     margin: auto !important;
     display: inline-block !important;
     float: none !important;
+    vertical-align: bottom;
 }
 
 @media(max-width: 500px) {
