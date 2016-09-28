@@ -2374,6 +2374,10 @@ p.change-lang a:focus {
     .form-group input {
         width: 100% !important;
     }
+    .ul-map-responsive {
+        padding-left: 0 !important;
+        margin-top: 20px !important;
+    }
 }
 
 @media(max-width: 800px) {
@@ -2385,6 +2389,9 @@ p.change-lang a:focus {
     }
     #contacts .row:first-child {
         margin-bottom: 40px;
+    }
+    #map {
+        margin-left: 0 !important;
     }
 }
 
