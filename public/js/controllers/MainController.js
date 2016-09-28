@@ -153,6 +153,18 @@ artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootS
          *  JQUERY FUNCTIONS
          * */
         $(document).ready(function () {
+
+            var isHash = localStorage.getItem('hash'),
+                isclassName = localStorage.getItem('className'),
+                isLang = localStorage.getItem('lang'),
+                istestObject = localStorage.getItem('hash');
+
+            if ((!isclassName || !isLang || !istestObject) ||
+                (isclassName  === null || isLang === null || istestObject === null)) {
+                localStorage.clear();
+            }
+
+
             $('a.back-to-top').on('click', function (e) {
                 var target = this.hash;
                 $target = $(target);
