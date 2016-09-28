@@ -95,8 +95,10 @@ artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootS
                     $location.path('/');
                 } else {
                     $target = $(target);
+                    var top = $target.offset().top;
+                    console.log(top);
                     $('html, body').stop().animate({
-                        'scrollTop': $target.offset().top //no need of parseInt here
+                        'scrollTop': top //no need of parseInt here
                     }, 900, 'swing', function () {
                         window.location.hash = target;
                     });
