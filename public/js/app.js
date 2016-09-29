@@ -26,7 +26,7 @@ artVikonce.config(function($stateProvider, $urlRouterProvider, $locationProvider
         NEWS: 'Новости',
         PRODUCTS_AND_SERVICES: 'Оборудование и Сервис',
         CONTACTS: 'Контакты',
-        SQUARE_POWER: 'Сферы Влияния',
+        SQUARE_POWER: 'Мы на карте',
         ABOUT_US: 'О нас',
         MISSIONS: 'Цели и Миссия',
         PRODUCT: 'Оборудование',

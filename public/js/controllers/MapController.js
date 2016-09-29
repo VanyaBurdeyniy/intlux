@@ -58,6 +58,14 @@ artVikonce.controller('MapController', ['$scope', function($scope) {
         }
     ];
 
+    function scrollToTop() {
+        $('html,body').animate({
+            scrollTop: 0
+        }, 700);
+    }
+    scrollToTop();
+
+
 
 
     var map = new GMaps({

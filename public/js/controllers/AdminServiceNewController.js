@@ -56,19 +56,9 @@ artVikonce.controller('AdminServiceNewController', ['$scope', '$rootScope', '$ht
         $scope.src = '';
 
         $('.save').click(function () {
-            $http.post('/news/add', {
-                content: tinyMCE.activeEditor.getContent(),
-                img: {
-                    base64: $('.dz-image').children().attr('src'),
-                    name: $('.dz-filename').children().text().replace('.', '')
-                },
-                description: $scope.description,
-                title: $scope.title
-            }).then(function (data) {
-                console.log(data);
-            });
-        });
-        $scope.save = function (service, indicator) {
+            var service = $scope.service;
+            var indicator = $scope.chosen;
+
             service.img = {
                 base64: $('.dz-image').children().attr('src'),
                 name: $('.dz-filename').children().text().replace('.', '')
@@ -89,7 +79,29 @@ artVikonce.controller('AdminServiceNewController', ['$scope', '$rootScope', '$ht
                     console.log(data);
                 })
             }
-        };
+        });
+        //$scope.save = function (service, indicator) {
+        //    service.img = {
+        //        base64: $('.dz-image').children().attr('src'),
+        //        name: $('.dz-filename').children().text().replace('.', '')
+        //    };
+        //    service.decriptionBig = tinyMCE.activeEditor.getContent();
+        //    if (indicator.hasCategory) {
+        //        $http.post('/service/add', service).then(function (data) {
+        //            console.log(data);
+        //        })
+        //    } else if (indicator.hasSubCategory) {
+        //        service.serviceId = indicator._id;
+        //        $http.post('/service/category/add', service).then(function (data) {
+        //            console.log(data);
+        //        })
+        //    } else {
+        //        service.subServiceId = indicator._id;
+        //        $http.post('/service/category/sub/add', service).then(function (data) {
+        //            console.log(data);
+        //        })
+        //    }
+        //};
 
 
         $scope.goToAllService = function () {
@@ -102,3 +114,22 @@ artVikonce.controller('AdminServiceNewController', ['$scope', '$rootScope', '$ht
 
 
     }]);
+
+
+
+
+
+//TODO
+//1. Цвет языка ---> такой же как в слайдере (зеленый текст) ++
+//2. Админ панель ---> поменять\проверить название всех кнопок (соответствие) ++
+//3. Пункт меню "Сферы влияния" ---> переходит не в начало страницы
+//4. Все пункты и подпукнты из Компрессорного оборудования перенести на главную страницу ++
+//5. Skype ---> сделать активной и текст ++
+//6. Админ панель ---> закончить функционал
+//7."Intlux Energy © All Rights Reserved." ---> сделать цвета логотипа ++
+//8. Пофиксить пропадание меню ++
+
+// Спросить маму откуда я взялся (капуста или морковка или аист) + спросить за планировку тех паспорт спроси а то мама не поймет
+// Ааааам может послушаешь да панееельный какой-нибудь может блочный мммм спросишь какой дом панельный блочный какой там какой монолитный перегородки из чего в общем из железобетона или из азбестацемента
+
+//TODO --- ПЕРЕВОДЫ (ждать правильных переводов)

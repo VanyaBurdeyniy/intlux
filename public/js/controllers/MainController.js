@@ -19,12 +19,12 @@ artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootS
             $scope.products = data.data;
         });
 
-        $http.get('/design').then(function(data) {
-           document.getElementsByTagName('html')[0].className = '';
-           document.getElementsByTagName('body')[0].className = '';
-            $('html').addClass(data.data[0].class);
-            $('body').addClass(data.data[0].class);
-        });
+        //$http.get('/design').then(function(data) {
+        //   document.getElementsByTagName('html')[0].className = '';
+        //   document.getElementsByTagName('body')[0].className = '';
+        //    $('html').addClass(data.data[0].class);
+        //    $('body').addClass(data.data[0].class);
+        //});
 
         $http.get('/services').then(function (data) {
             console.log(data);
@@ -139,11 +139,13 @@ artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootS
             if (newTarget) {
                 var target = newTarget;
                 $target = $(target);
-                $('html, body').stop().animate({
-                    'scrollTop': $target.offset().top //no need of parseInt here
-                }, 900, 'swing', function () {
-                    window.location.hash = target;
-                });
+                if ($target.offset()) {
+                    $('html, body').stop().animate({
+                        'scrollTop': $target.offset().top //no need of parseInt here
+                    }, 900, 'swing', function () {
+                        window.location.hash = target;
+                    });
+                }
             }
         }
 

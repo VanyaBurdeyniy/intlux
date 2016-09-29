@@ -1,3 +1,4 @@
 ./node_modules
+./node_modules/*
 .directory
 ./bower_components
