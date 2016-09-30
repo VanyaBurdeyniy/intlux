@@ -1,11 +1,11 @@
-artVikonce.controller('AdminServiceNewController', ['$scope', '$rootScope', '$http', '$location',
-    function ($scope, $rootScope, $http, $location) {
+artVikonce.controller('AdminProductNewController', ['$scope', '$rootScope', '$http', '$location', '$sce'
+,    function ($scope, $rootScope, $http, $location, $sce) {
 
         $rootScope.isAdmin = true;
         $rootScope.isServices = false;
         $rootScope.isNews = true;
         $rootScope.isProducts = false;
-        $scope.service = {};
+        $scope.product = {};
         $scope.chosen = {};
 
         tinymce.init({
@@ -22,9 +22,9 @@ artVikonce.controller('AdminServiceNewController', ['$scope', '$rootScope', '$ht
             ]
         });
 
-        $http.get('/services').then(function (data) {
+        $http.get('/products').then(function (data) {
             $scope.productList = data.data;
-            $http.get('/service/category').then(function (data) {
+            $http.get('/products/category').then(function (data) {
                 $scope.productList = $scope.productList.concat(data.data);
                 console.log($scope.productList);
             });
@@ -56,51 +56,29 @@ artVikonce.controller('AdminServiceNewController', ['$scope', '$rootScope', '$ht
         $scope.src = '';
 
         $('.save').click(function () {
-            var service = $scope.service;
+            var product = $scope.product;
             if (typeof $scope.chosen === 'string') var indicator = JSON.parse($scope.chosen);
 
-            service.img = {
+            product.img = {
                 base64: $('.dz-image').children().attr('src'),
                 name: $('.dz-filename').children().text().replace('.', '')
             };
-            service.decriptionBig = tinyMCE.activeEditor.getContent();
+            product.decriptionBig = tinyMCE.activeEditor.getContent();
             if (indicator) {
-                service.serviceId = indicator._id;
-                $http.post('/service/category/add', service).then(function (data) {
+                product.productId = indicator._id;
+                $http.post('/products/category/add', product).then(function (data) {
                     console.log(data);
                 })
             } else {
-                $http.post('/service/add', service).then(function (data) {
+                product.hasCategory = false;
+                $http.post('/products/add', product).then(function (data) {
                     console.log(data);
                 })
             }
         });
-        //$scope.save = function (service, indicator) {
-        //    service.img = {
-        //        base64: $('.dz-image').children().attr('src'),
-        //        name: $('.dz-filename').children().text().replace('.', '')
-        //    };
-        //    service.decriptionBig = tinyMCE.activeEditor.getContent();
-        //    if (indicator.hasCategory) {
-        //        $http.post('/service/add', service).then(function (data) {
-        //            console.log(data);
-        //        })
-        //    } else if (indicator.hasSubCategory) {
-        //        service.serviceId = indicator._id;
-        //        $http.post('/service/category/add', service).then(function (data) {
-        //            console.log(data);
-        //        })
-        //    } else {
-        //        service.subServiceId = indicator._id;
-        //        $http.post('/service/category/sub/add', service).then(function (data) {
-        //            console.log(data);
-        //        })
-        //    }
-        //};
-
 
         $scope.goToAllService = function () {
-            $location.path('/admin/panel/services');
+            $location.path('/admin/panel/products');
         };
 
         $scope.toTrustedHTML = function (html) {

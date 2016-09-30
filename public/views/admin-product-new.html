@@ -18,17 +18,20 @@
                     <div class="admin-products-wrapper">
 
                         <div class="col-xs-12 text-right">
-                            <button class="btn btn-success" ng-click="goToAllNews();">Все оборудование</button>
+                            <button class="btn btn-success" ng-click="goToAllproduct();">Все оборудование</button>
                         </div>
+
+                        <div class="form-group">
+                            <label for="chosen">Раздел:</label>
+                            <select name="" id="chosen" ng-model="chosen">
+                                <option value="{{product}}" ng-repeat="product in productList">{{product.title}}</option>
+                            </select>
+                        </div>
+
 
                         <div class="form-group">
                             <label for="title">Название:</label>
-                            <input style="width:500px;" type="text" id="title" ng-model="title" />
-                        </div>
-
-                        <div class="form-group">
-                            <label for="descr">Описание:</label>
-                            <input style="width:500px;" type="text" id="descr" ng-model="description" />
+                            <input style="width:500px;" type="text" id="title" ng-model="product.title" />
                         </div>
 
                         <div class="container">
@@ -42,10 +45,10 @@
                         </div>
 
                         <!--<form method="post" ng-controller="TinyMceController">-->
-                        <textarea ui-tinymce="tinymceOptions" ng-model="tinymceModel"></textarea>
+                        <textarea ui-tinymce="tinymceOptions" ng-model="product.tinymceModel"></textarea>
                         <!--</form>-->
                         <br>
-                        <button class="click btn btn-primary save" ng-click="saveNews();">Добавить</button>
+                        <button class="click btn btn-primary save">Добавить</button>
                     </div>
 
 

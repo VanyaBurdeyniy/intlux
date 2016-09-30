@@ -4,6 +4,7 @@
     <nav ng-include src="'views/partials/sidebar.html'" class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation"></nav>
 
     <div id="page-content-wrapper">
+
         <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
             <span class="hamb-top"></span>
             <span class="hamb-middle"></span>
@@ -17,6 +18,9 @@
                 <div class="col-lg-10">
 
                     <div style="margin-bottom:20px;" class="col-sm-12 admin-products-wrapper">
+
+                        <button style="float:right;" ng-click="deleteService(productList);" class="btn btn-danger">Удалить</button>
+
                         <div class="form-group">
                             <label for="title">Название:</label>
                             <input style="width:80%;" type="text" ng-model="productList.title" ng-bind="productList.title" id="title"/>

@@ -1,4 +1,4 @@
-artVikonce.controller('AdminController', ['$scope', '$rootScope', '$http', '$location', 'Authentication', function($scope, $rootScope, $http, $location, Authentication) {
+artVikonce.controller('AdminController', ['$scope', '$rootScope', '$http', '$location', 'Authentication', function ($scope, $rootScope, $http, $location, Authentication) {
 
     $scope.authentication = Authentication;
 
@@ -15,41 +15,40 @@ artVikonce.controller('AdminController', ['$scope', '$rootScope', '$http', '$loc
 
     if ($scope.authentication.user) $location.path('/admin/panel');
 
-    $http.get('/news').then(function(data) {
+    $http.get('/news').then(function (data) {
         console.log(data);
-        data.data = data.data.filter(function(news) {
+        data.data = data.data.filter(function (news) {
             return news.img.replace('"', '');
         });
-        data.data = data.data.filter(function(news) {
-            return news.content = $('<div>'+$.parseHTML(news.content)+'</div>');
+        data.data = data.data.filter(function (news) {
+            return news.content = $('<div>' + $.parseHTML(news.content) + '</div>');
         });
         console.log(data.data);
-       $scope.news = data.data;
+        $scope.news = data.data;
     });
 
     $scope.changeColor = function (className) {
         localStorage.setItem('className', className);
-        $http.put('/design/edit', {class: className}).then(function(data) {
+        $http.put('/design/edit', {class: className}).then(function (data) {
             console.log(data);
         });
     };
 
-    $scope.signIn = function(credentials) {
+    $scope.signIn = function (credentials) {
         var user = {
-          'username':'test',
-            'password':'testtest'
+            'username': 'test',
+            'password': 'testtest'
         };
-        $http.post('/auth/signin', user).then(function(data) {
+        $http.post('/auth/signin', user).then(function (data) {
             $scope.authentication.user = data;
             console.log(data);
-            var testObject = { isLoggedIn: true };
+            var testObject = {isLoggedIn: true};
             localStorage.setItem('testObject', JSON.stringify(testObject));
 
             if (data.data) {
                 $location.path('/admin/panel');
             }
         });
-
 
 
         $(document).ready(function () {

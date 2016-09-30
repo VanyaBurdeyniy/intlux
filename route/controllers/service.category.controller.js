@@ -5,6 +5,7 @@
  */
 var mongoose = require('mongoose'),
     ServiceCategory = mongoose.model('ServiceCategory'),
+    Service = mongoose.model('Service'),
     path = require('path'),
     fs = require('fs');
 
@@ -39,14 +40,21 @@ exports.add = function(req, res) {
     var img = req.body.img.base64;
     var data = img.replace(/^data:image\/\w+;base64,/, "");
     var buf = new Buffer(data, 'base64');
-    var name = JSON.stringify(Math.floor(Math.random() * 1000));
     fs.writeFile('public/img/upload/'+req.body.img.name+'.png', buf);
     req.body.img.path = 'img/upload/'+req.body.img.name+'.png';
     req.body.img.base64 = '';
 
     // Init Variables
     var products = new ServiceCategory(req.body);
-    var message = null;
+
+    Service.findOne({ _id: req.body.serviceId }, function(err, service) {
+       if (err) res.send(500, {
+           message: getErrorMessage(err)
+       });
+
+        service.hasCategory = true;
+        service.save();
+    });
 
     // Then save the user
     products.save(function(err) {
@@ -100,6 +108,17 @@ exports.get = function(req, res, next) {
 exports.remove = function(req, res, next) {
     ServiceCategory.remove({ _id: req.body._id }, function(err) {
         if (!err) {
+            ServiceCategory.find({}, function(err, serviceCategories) {
+                if (serviceCategories.length < 1) {
+                    Service.findOne({ _id: req.body.serviceId }, function(err, service) {
+                        if (err) res.send(500, {
+                            message: getErrorMessage(err)
+                        });
+                        service.hasCategory = false;
+                        service.save();
+                    });
+                }
+            });
             res.status(200).json('ok');
         }
         else {

@@ -5,6 +5,7 @@
  */
 var mongoose = require('mongoose'),
     ProductsCategory = mongoose.model('ProductCategory'),
+    Product = mongoose.model('Product'),
     path = require('path'),
     fs = require('fs');
 
@@ -47,6 +48,14 @@ exports.add = function(req, res) {
     // Init Variables
     var products = new ProductsCategory(req.body);
     var message = null;
+
+    Product.findOne({ _id: req.body.productId }, function(err, product) {
+        if (err) res.send(500, {
+            message: getErrorMessage(err)
+        });
+        product.hasCategory = true;
+        product.save();
+    });
 
     // Then save the user
     products.save(function(err) {
@@ -97,6 +106,20 @@ exports.get = function(req, res, next) {
     });
 };
 
+
+exports.getAll = function(req, res, next) {
+    ProductsCategory.find({}, function(err, news) {
+        // When an error occurred
+        if (err) {
+            return err;
+        }
+
+        res.jsonp(news);
+
+        return news;
+    });
+};
+
 exports.getOne = function(req, res, next) {
     ProductsCategory.find({_id: req.params.id}, function(err, news) {
         // When an error occurred
@@ -107,5 +130,27 @@ exports.getOne = function(req, res, next) {
         res.jsonp(news);
 
         return news;
+    });
+};
+
+exports.remove = function(req, res, next) {
+    ProductsCategory.remove({ _id: req.body._id }, function(err) {
+        if (!err) {
+            ProductsCategory.find({}, function(err, productCategories) {
+                if (productCategories.length < 1) {
+                    Product.findOne({ _id: req.body.productId }, function(err, product) {
+                        if (err) res.send(500, {
+                            message: getErrorMessage(err)
+                        });
+                        product.hasCategory = false;
+                        product.save();
+                    });
+                }
+            });
+            res.status(200).json('ok');
+        }
+        else {
+            res.status(500).json('not ok');
+        }
     });
 };

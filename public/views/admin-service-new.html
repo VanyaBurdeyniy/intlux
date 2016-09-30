@@ -22,9 +22,9 @@
                         </div>
 
                         <div class="form-group">
-                            <label>Раздел:</label>
-                            <select name="" id="" ng-model="chosen">
-                                <option value="" ng-repeat="product in productList">{{product.title}}</option>
+                            <label for="chosen">Раздел:</label>
+                            <select name="" id="chosen" ng-model="chosen">
+                                <option value="{{product}}" ng-repeat="product in productList">{{product.title}}</option>
                             </select>
                         </div>
 

@@ -5,6 +5,7 @@ artVikonce.controller('AdminProductsEditController', ['$scope', '$rootScope', '$
         $rootScope.isProducts = true;
         $rootScope.isServices = false;
         $rootScope.isNews = false;
+        var serviceFlag = '';
         var myDropzone;
         var dropzone;
 
@@ -52,6 +53,19 @@ artVikonce.controller('AdminProductsEditController', ['$scope', '$rootScope', '$
             });
         };
 
+        $scope.deleteService = function(service) {
+            var url;
+            if (serviceFlag === 'products') url = '/products/remove';
+            else if(serviceFlag === 'productCategory') url = '/products/category/remove';
+            $http.post(url, service)
+                .then(function(data) {
+                    console.log(data);
+                })
+                .catch(function(err) {
+                    console.log(err);
+                });
+        };
+
 
         $http.get('/products').then(function (data) {
             $scope.productList = data.data;
@@ -63,6 +77,7 @@ artVikonce.controller('AdminProductsEditController', ['$scope', '$rootScope', '$
                 if ($scope.productList) {
                     tinymce.activeEditor.setContent($scope.productList.decriptionBig);
                     activateDropzone();
+                    serviceFlag = 'products';
                 } else {
                     $http.get('/products/category/one/' + $stateParams.id).then(function (data) {
                         $scope.subProducts = data.data;
@@ -70,6 +85,7 @@ artVikonce.controller('AdminProductsEditController', ['$scope', '$rootScope', '$
                         if ($scope.productList) {
                             tinymce.activeEditor.setContent($scope.productList.decriptionBig);
                             activateDropzone();
+                            serviceFlag = 'productCategory';
                         }
                     });
                 }

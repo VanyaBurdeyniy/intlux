@@ -1,11 +1,17 @@
 artVikonce.controller('ProductCategoriesController', ['$scope', '$sce', '$stateParams', '$rootScope', '$location', '$http',
     function ($scope, $sce, $stateParams, $rootScope, $location, $http) {
 
-
-        $http.get('/products/category/one/' + $stateParams.id).then(function (data) {
+        $http.get('/products').then(function (data) {
             $scope.products = data.data.filter(function (product) {
                 return product._id == $stateParams.id;
             });
+            if ($scope.products.length < 1) {
+                $http.get('/products/category/one/' + $stateParams.id).then(function (data) {
+                    $scope.products = data.data.filter(function (product) {
+                        return product._id == $stateParams.id;
+                    });
+                });
+            }
         });
 
         $scope.toTrustedHTML = function (html) {
@@ -14,7 +20,14 @@ artVikonce.controller('ProductCategoriesController', ['$scope', '$sce', '$stateP
 
 
         $scope.goBack = function (product) {
-            $location.path('/product/subcategory/' + product.productId);
+            if (!product.productId) {
+                var target;
+                target = '#products-container';
+                localStorage.setItem('hash', target);
+                $location.path('/');
+            } else {
+                $location.path('/product/subcategory/' + product.productId);
+            }
         };
 
         $scope.goToBlock = function () {

@@ -54,7 +54,7 @@ artVikonce.controller('AdminServicesEditController', ['$scope', '$rootScope', '$
 
         $scope.deleteService = function(service) {
             var url;
-            if (serviceFlag === 'service') url = '/service/remove';
+            if (serviceFlag === 'services') url = '/service/remove';
             else if(serviceFlag === 'serviceCategory') url = '/service/category/remove';
             else if (serviceFlag === 'serviceSubCategory') url = '/service/category/sub/remove';
             $http.post(url, service)
