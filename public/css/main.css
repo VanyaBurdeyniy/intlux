@@ -2443,6 +2443,11 @@ p.change-lang a:focus {
     height: 100%;
 }
 
+.overflow-auto {
+    height: auto !important;
+    overflow: visible !important;
+}
+
 #services-container .container .product-list h6 {
     min-height: 65px;
 }
