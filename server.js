@@ -19,7 +19,7 @@ app.use(express.static(__dirname + '/bower_components'));
 
 
 // Bootstrap application
-app.listen(4000);
+app.listen(80);
 
 // Tell developer about it
 console.log(process.env.PORT || 4000);
