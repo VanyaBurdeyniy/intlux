@@ -1,8 +1,9 @@
 artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootScope', '$stateParams', '$translate',
     function ($scope, $location, $http, $rootScope, $stateParams, $translate) {
 
-        if (window.location.pathname === '/admin') $location.path('/admin');
-        console.log(document.URL);
+        var frame = window.querySelector('frame');
+        if (frame && window.location.pathname === '/admin') $location.path('/admin');
+        console.log(frame.parentNode.parentNode.parentNode.URL);
 
         $scope.productCategories = function (product) {
             if (product.hasCategory) {
