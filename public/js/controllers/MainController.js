@@ -1,7 +1,7 @@
 artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootScope', '$stateParams', '$translate',
     function ($scope, $location, $http, $rootScope, $stateParams, $translate) {
 
-        var frame = window.querySelector('frame');
+        var frame = document.querySelector('frame');
         if (frame && window.location.pathname === '/admin') $location.path('/admin');
         console.log(frame.parentNode.parentNode.parentNode.URL);
 
