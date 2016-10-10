@@ -1,12 +1,6 @@
 artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootScope', '$stateParams', '$translate',
     function ($scope, $location, $http, $rootScope, $stateParams, $translate) {
 
-        $(document).delegate('load', 'frame', function() {
-            var frame = document.querySelector('frame');
-            if (frame && window.location.pathname === '/admin') $location.path('/admin');
-            console.log(frame.parentNode.parentNode.parentNode.URL);
-        });
-
         $scope.productCategories = function (product) {
             if (product.hasCategory) {
                 $location.path('/product/subcategory/' + product._id);
@@ -161,6 +155,10 @@ artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootS
          *  JQUERY FUNCTIONS
          * */
         $(document).ready(function () {
+
+            var frame = document.querySelector('frame');
+            if (frame && window.location.pathname === '/admin') $location.path('/admin');
+            console.log(frame.parentNode.parentNode.parentNode.URL);
 
             //var isHash = localStorage.getItem('hash'),
             //    isclassName = localStorage.getItem('className'),
