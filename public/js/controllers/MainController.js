@@ -2,6 +2,7 @@ artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootS
     function ($scope, $location, $http, $rootScope, $stateParams, $translate) {
 
         if (window.location.pathname === '/admin') $location.path('/admin');
+        console.log(document.URL);
 
         $scope.productCategories = function (product) {
             if (product.hasCategory) {
