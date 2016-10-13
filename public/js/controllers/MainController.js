@@ -49,11 +49,9 @@ artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootS
 
         $scope.sendEmail = function (contact) {
             $http.post('/email/send', contact).then(function () {
-                
+
             });
         };
-
-        //$scope.dateRange = Date.now();
 
         $scope.goToNewsDescribe = function (id) {
             $location.path('/news/' + id);
