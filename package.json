@@ -12,7 +12,8 @@
     "express-session": "^1.14.0",
     "mongoose": "^4.5.2",
     "on-finished": "^2.3.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "sendgrid": "^4.5.0"
   },
   "devDependencies": {},
   "scripts": {

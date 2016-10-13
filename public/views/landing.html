@@ -239,35 +239,35 @@
                 <h2 class="border-light" style="margin-top: 36px;">Обратная связь</h2>
 
                 <div class="col-sm-6">
-                    <form action="mailto:vanyaburd@gmail.com" class="form-inline">
+                    <form class="form-inline">
                         <div class="col-xs-12 text-center">
                             <div class="form-group margin-right">
                                 <label for="input-name">Имя</label>
-                                <input type="text" class="form-control" id="input-name" placeholder="">
+                                <input type="text" ng-model="contact.name" class="form-control" id="input-name" placeholder="">
                             </div>
                             <div class="form-group margin-left">
                                 <label for="input-email">Почтовый адресс</label>
-                                <input type="email" class="form-control" id="input-email" placeholder="">
+                                <input type="email" ng-model="contact.email" class="form-control" id="input-email" placeholder="">
                             </div>
                         </div>
                         <div class="col-xs-12 text-center">
                             <div class="form-group margin-right">
                                 <label for="input-city">Город</label>
-                                <input type="text" class="form-control" id="input-city" placeholder="">
+                                <input type="text" class="form-control" ng-model="contact.city" id="input-city" placeholder="">
                             </div>
                             <div class="form-group margin-left">
                                 <label for="input-phone">Номер телефона</label>
-                                <input type="number" class="form-control" id="input-phone" placeholder="">
+                                <input type="number" class="form-control" id="input-phone" ng-model="contact.phone" placeholder="">
                             </div>
                         </div>
                         <div class="col-xs-12 text-center">
                             <div class="form-group">
                                 <label for="form-textarea">Сообщение</label>
-                                <textarea class="form-control" id="form-textarea" rows="5"></textarea>
+                                <textarea class="form-control" id="form-textarea" ng-model="contact.message" rows="5"></textarea>
                             </div>
                         </div>
 
-                        <button ng-click="sendEmail()" type="submit" class="btn send-btn">Отправить</button>
+                        <button ng-click="sendEmail(contact)" type="submit" class="btn send-btn">Отправить</button>
                     </form>
                 </div>
 

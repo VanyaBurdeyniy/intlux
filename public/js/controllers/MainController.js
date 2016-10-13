@@ -1,6 +1,14 @@
 artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootScope', '$stateParams', '$translate',
     function ($scope, $location, $http, $rootScope, $stateParams, $translate) {
 
+        $scope.contact = {
+            name: '',
+            email: '',
+            phone: '',
+            city: '',
+            message: ''
+        };
+
         $scope.productCategories = function (product) {
             if (product.hasCategory) {
                 $location.path('/product/subcategory/' + product._id);
@@ -39,9 +47,9 @@ artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootS
             }
         };
 
-        $scope.sendEmail = function () {
-            $http.post('/email/send', {}).then(function () {
-
+        $scope.sendEmail = function (contact) {
+            $http.post('/email/send', contact).then(function () {
+                
             });
         };
 
@@ -93,6 +101,7 @@ artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootS
                         localStorage.setItem('hash', target);
                     }
                     $location.path('/');
+                    $('.navbar-collapse').removeClass('in');
                 } else {
                     $target = $(target);
                     var top = $target.offset().top;
@@ -102,6 +111,7 @@ artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootS
                     }, 900, 'swing', function () {
                         window.location.hash = target;
                     });
+                    $('.navbar-collapse').removeClass('in');
                 }
             }
         };
@@ -145,6 +155,7 @@ artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootS
                     }, 900, 'swing', function () {
                         window.location.hash = target;
                     });
+                    $('.navbar-collapse').removeClass('in');
                 }
             }
         }
@@ -156,9 +167,16 @@ artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootS
          * */
         $(document).ready(function () {
 
-            var frame = document.querySelector('frame');
-            if (frame && window.location.pathname === '/admin') $location.path('/admin');
-            console.log(frame.parentNode.parentNode.parentNode.URL);
+            // $('.navbar-collapse').on('click', function(e) {
+            //     e.stopPropagation();
+            // });
+            // $('.navbar-header').on('click', function(e) {
+            //     // $('.navbar-collapse').toggleClass('in');
+            //     e.stopPropagation();
+            // });
+            // $('div').on('click', function() {
+            //     $('.navbar-collapse').removeClass('in');
+            // });
 
             //var isHash = localStorage.getItem('hash'),
             //    isclassName = localStorage.getItem('className'),

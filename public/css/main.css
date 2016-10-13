@@ -2400,6 +2400,11 @@ p.change-lang a:focus {
         padding-left: 0 !important;
         margin-top: 20px !important;
     }
+    .all-rights {
+        position: absolute;
+        bottom: -53px;
+        left: 0;
+    }
 }
 
 @media(max-width: 800px) {
@@ -2414,6 +2419,11 @@ p.change-lang a:focus {
     }
     #map {
         margin-left: 0 !important;
+    }
+    .all-rights {
+        position: absolute;
+        bottom: -53px;
+        left: 0;
     }
 }
 

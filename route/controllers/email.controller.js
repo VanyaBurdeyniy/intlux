@@ -1,22 +1,24 @@
-var email = require('mailer');
-
-
+var helper = require('sendgrid').mail;
 
 
 exports.send = function(req, res) {
-    email.send({
-            host : "localhost",              // smtp server hostname
-            port : "4000",                     // smtp server port
-            domain : "localhost",            // domain used by client to identify itself to server
-            to : "vanyaburd@gmail.com",
-            from : "vanya.burdeyniy@do-it.co",
-            subject : "node_mailer test email",
-            body: "Hello! This is a test of the node_mailer.",
-            authentication : "login",        // auth login is supported; anything else is no auth
-            username : "dXNlcm5hbWU=",       // Base64 encoded username
-            password : "cGFzc3dvcmQ="        // Base64 encoded password
-        },
-        function(err, result){
-            if(err){ console.log(err); }
-        });
+    console.log(req);
+    var from_email = new helper.Email(req.body.email);
+    var to_email = new helper.Email('office@intluxenergy.com');
+    var subject = req.body.name;
+    var content = new helper.Content('text/plain', req.body.message + '\n\n' + req.body.city + ', ' + req.body.phone);
+    var mail = new helper.Mail(from_email, subject, to_email, content);
+
+    var sg = require('sendgrid')('SG.TsCZcCZsQcSuahCLVQ0OSg.aGGhs2k_ShxOqHYkGJ7x-cqujHyGGV0Z3gPLVyO3UAU');
+    var request = sg.emptyRequest({
+        method: 'POST',
+        path: '/v3/mail/send',
+        body: mail.toJSON()
+    });
+
+    sg.API(request, function(error, response) {
+        console.log(response.statusCode);
+        console.log(response.body);
+        console.log(response.headers);
+    });
 };
