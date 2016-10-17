@@ -18,7 +18,7 @@ artVikonce.controller('MainController', ['$scope', '$location', '$http', '$rootS
         };
 
         $http.get('/footer').then(function(data) {
-            var footer = data.data[0];
+            var footer = data.data[data.data.length - 1];
             $('.skype-link').attr('href', 'skype:' + footer.skype.address +'?call');
             $('.img-skype').attr('href', 'skype:' + footer.skype.address +'?call');
             $('.skype-link').find('span').text(footer.skype.name);
