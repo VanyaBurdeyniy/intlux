@@ -1,0 +1,56 @@
+<div id="wrapper">
+    <div class="overlay"></div>
+
+    <nav ng-include src="'views/partials/sidebar.html'" class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation"></nav>
+
+    <div id="page-content-wrapper">
+        <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+        </button>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-2"></div>
+
+                <div class="col-lg-10">
+                    <div class="admin-products-wrapper">
+
+                        <div class="form-group">
+                            <label for="title">Номер:</label>
+                            <input style="width:500px;" type="text" id="title" ng-model="phone" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="descr">Почта:</label>
+                            <input style="width:500px;" type="text" id="descr" ng-model="email" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="skype">Имя в скайпе:</label>
+                            <input style="width:500px;" type="text" id="skype" ng-model="skype.name" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="skype-address">Никнейм в скайпе:</label>
+                            <input style="width:500px;" type="text" id="skype-address" ng-model="skype.address" />
+                        </div>
+
+                        <br>
+                        <button class="click btn btn-primary save" ng-click="saveFooter();">Добавить</button>
+                    </div>
+
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -198,6 +198,13 @@ artVikonce.config(function($stateProvider, $urlRouterProvider, $locationProvider
             controller: 'AdminServiceNewController'
         })
 
+        .state('AdminFooterController', {
+            name: 'AdminFooterController',
+            url: '/admin/panel/footer',
+            templateUrl: '../views/admin-footer.html',
+            controller: 'AdminFooterController'
+        })
+
     //$locationProvider.html5Mode(true);
     $urlRouterProvider.otherwise('/');
 });
