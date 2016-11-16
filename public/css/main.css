@@ -2449,6 +2449,10 @@ p.change-lang a:focus {
         margin-top: 20px;
         margin-bottom:20px;
     }
+    #services-container .container .product-list h6, #products-container .container .product-list h6 {
+        min-height: 70px;
+        font-size: 14px;
+    }
 }
 
 #services-container .container {
