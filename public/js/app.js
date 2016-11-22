@@ -31,8 +31,7 @@ artVikonce.config(function($stateProvider, $urlRouterProvider, $locationProvider
         MISSIONS: 'Цели и Миссия',
         PRODUCT: 'Оборудование',
         SERVICES: 'Сервис',
-        SLIDER_DESCRIPTION: 'Мы предлагаем наш опыт и возможности в' +
-        ' поставках с решением любых трудностей и нестандартных ситуаций, а не железо и технологии'
+        SLIDER_DESCRIPTION: 'Внедряя разумные компоненты делаем мир лучше'
     });
     $translateProvider.translations('kz', {
         COMPANY: 'Компания',
