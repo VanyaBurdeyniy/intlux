@@ -9,7 +9,7 @@ exports.send = function(req, res) {
     var content = new helper.Content('text/plain', req.body.message + '\n\n' + req.body.city + ', ' + req.body.phone);
     var mail = new helper.Mail(from_email, subject, to_email, content);
 
-    var sg = require('sendgrid')('SG.TsCZcCZsQcSuahCLVQ0OSg.aGGhs2k_ShxOqHYkGJ7x-cqujHyGGV0Z3gPLVyO3UAU');
+    var sg = require('sendgrid')('xxxxxxx');
     var request = sg.emptyRequest({
         method: 'POST',
         path: '/v3/mail/send',
